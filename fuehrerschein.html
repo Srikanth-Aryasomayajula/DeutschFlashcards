@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deutsch Flashcards – Führerschein</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script src="xlsx.full.min.js"></script>
+  <script defer src="script.js"></script> <!-- For navbar + menu toggle -->
+  <script defer src="fuehrerschein.js"></script>
+</head>
+
+<body class="bg-text fuehrerschein-page">
+  <!-- Shared navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <main class="main-content">
+    <h1 class="main-title">Führerschein</h1>
+
+    <div class="dropdown-buttons" style="flex-direction: column;">
+      <div class="view-mode">
+        <label><input type="radio" name="viewMode" id="viewFlashcards" checked /> Flashcards</label>
+        <label><input type="radio" name="viewMode" id="viewTable" /> Table</label>
+      </div>
+
+      <button id="displayTableBtn">Display</button>
+
+      <!-- Flashcards container -->
+      <div id="flashcardContainer" class="flashcard-container" style="display: none;"></div>
+
+      <!-- Embedded iframe (optional display fallback) -->
+      <iframe id="fuehrerscheinFrame" src="fuehrerschein_table.html" style="display:none;"></iframe>
+    </div>
+
+    <!-- Table view -->
+    <table id="fuehrerscheinTable" class="vocab-table" style="display:none;">
+      <thead>
+        <tr>
+          <th>German</th>
+          <th>English</th>
+          <th>Action to be done during Exam</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+</html>

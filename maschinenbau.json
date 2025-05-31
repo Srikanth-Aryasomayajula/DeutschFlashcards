@@ -1,0 +1,1022 @@
+[
+  {
+    "German": "die Geschwindigkeit, -en",
+    "English": "velocity, speed",
+    "Example": "Die Geschwindigkeit beträgt 80 km/h.\nThe speed is 80 km/h.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Beschleunigung, -en",
+    "English": "acceleration",
+    "Example": "Die Beschleunigung liegt bei 3 m/s².\nThe acceleration is 3 m/s².",
+    "Remarks": ""
+  },
+  {
+    "German": "die Verzögerung, -en",
+    "English": "deceleration",
+    "Example": "Die Verzögerung beträgt -2 m/s².\nThe deceleration is -2 m/s².",
+    "Remarks": ""
+  },
+  {
+    "German": "der Weg, -e",
+    "English": "distance, path",
+    "Example": "Der Weg beträgt 100 Meter.\nThe distance is 100 meters.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Verschiebung, -en",
+    "English": "displacement",
+    "Example": "Die Verschiebung beträgt 2 mm.\nThe displacement is 2 mm.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Lageänderung, -en",
+    "English": "change in position",
+    "Example": "Die Lageänderung wurde durch das FEM-Modell berechnet.\nThe change in position was calculated using the FEM model.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Geschwindigkeitserhöhung, -en",
+    "English": "increase in speed",
+    "Example": "Die Geschwindigkeitserhöhung ist linear.\nThe speed increase is linear.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Masse, -n",
+    "English": "mass",
+    "Example": "Die Masse des Körpers beträgt 10 kg.\nThe mass of the object is 10 kg.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Trägheit, -en",
+    "English": "inertia",
+    "Example": "Die Trägheit beeinflusst die Beschleunigung.\nInertia affects acceleration.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Kraft, ¨-e",
+    "English": "force",
+    "Example": "Die wirkende Kraft ist 200 N.\nThe applied force is 200 N.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Moment, -e",
+    "English": "moment, torque",
+    "Example": "Das Moment beträgt 50 Nm.\nThe torque is 50 Nm.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Drehmoment, -e",
+    "English": "torque",
+    "Example": "Das Drehmoment ist entscheidend für den Antrieb.\nThe torque is critical for the drive.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Reibung, -en",
+    "English": "friction",
+    "Example": "Die Reibung wurde in der Simulation berücksichtigt.\nFriction was considered in the simulation.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Impuls",
+    "English": "momentum",
+    "Example": "Der Impuls wird beim Aufprall übertragen.\nThe momentum is transferred during impact.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Kraftwirkung, -en",
+    "English": "force effect",
+    "Example": "Die Kraftwirkung führte zur Verformung.\nThe force effect led to deformation.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Schwerpunkt, -e",
+    "English": "center of gravity",
+    "Example": "Der Schwerpunkt liegt in der Mitte der Struktur.\nThe center of gravity is in the middle of the structure.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Hebelwirkung, -en",
+    "English": "lever effect",
+    "Example": "Die Hebelwirkung verstärkt das Moment.\nThe lever effect amplifies the moment.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Gewicht, -e",
+    "English": "weight",
+    "Example": "Das Gewicht eines Körpers auf der Erde beträgt 98 N.\nThe weight of a body on Earth is 98 N.",
+    "Remarks": "Kraft auf ein Objekt durch Gravitation (W = m·g)"
+  },
+  {
+    "German": "die Gravitation, -en",
+    "English": "gravity",
+    "Example": "Die Gravitation hält uns auf der Erde.\nGravity keeps us grounded on Earth.",
+    "Remarks": "Anziehungskraft zwischen Massen"
+  },
+  {
+    "German": "die Fallbeschleunigung, -en",
+    "English": "acceleration due to gravity",
+    "Example": "Die Fallbeschleunigung auf der Erde beträgt ungefähr 9,81 Meter pro Quadratsekunde.\nThe acceleration due to gravity on Earth is approximately 9.81 meters per second squared.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Gravitationskraft, ¨-e",
+    "English": "gravitational force",
+    "Example": "Die Gravitationskraft auf der Erde beträgt 9,81 m/s².\nThe gravitational force on Earth is 9.81 m/s².",
+    "Remarks": "Anziehungskraft der Erde auf ein Objekt"
+  },
+  {
+    "German": "die Normalkraft, ¨-e",
+    "English": "normal force",
+    "Example": "Die Normalkraft gleicht das Gewicht aus.\nThe normal force balances the weight.",
+    "Remarks": "Kraft senkrecht zur Kontaktfläche"
+  },
+  {
+    "German": "die Reibungskraft, ¨-e",
+    "English": "frictional force",
+    "Example": "Die Reibungskraft bremst den Wagen ab.\nThe frictional force slows down the cart.",
+    "Remarks": "Gegenkraft zur Bewegung entlang einer Oberfläche"
+  },
+  {
+    "German": "die Haftreibung, -en",
+    "English": "static friction",
+    "Example": "Die Haftreibung ist größer als die Gleitreibung.\nStatic friction is greater than sliding friction.",
+    "Remarks": "Reibungskraft vor Bewegung"
+  },
+  {
+    "German": "die Gleitreibung, -en",
+    "English": "kinetic/sliding friction",
+    "Example": "Gleitreibung wirkt beim Rutschen eines Blocks.\nSliding friction acts during block motion.",
+    "Remarks": "Reibung während Bewegung"
+  },
+  {
+    "German": "die Zentripetalkraft, ¨-e",
+    "English": "centripetal force",
+    "Example": "Die Zentripetalkraft hält das Auto in der Kurve.\nThe centripetal force keeps the car in the curve.",
+    "Remarks": "Kraft zur Kreisbahn-Zentrierung"
+  },
+  {
+    "German": "die Trägheitskraft, ¨-e",
+    "English": "inertial force",
+    "Example": "Beim Bremsen spürt man die Trägheitskraft.\nWhen braking, you feel the inertial force.",
+    "Remarks": "Scheinbare Kraft durch Beschleunigung (z. B. bei Bremsung)"
+  },
+  {
+    "German": "die Leistung, -en",
+    "English": "power",
+    "Example": "Der Motor hat eine Leistung von 75 kW.\nThe engine has a power of 75 kW.",
+    "Remarks": "Energieumsatz pro Zeit (P = W/t)"
+  },
+  {
+    "German": "die Arbeit, -en",
+    "English": "work",
+    "Example": "Die Arbeit beim Heben beträgt 500 J.\nThe work for lifting is 500 J.",
+    "Remarks": "Kraft x Weg (W = F·s)"
+  },
+  {
+    "German": "die Energie, -n",
+    "English": "energy",
+    "Example": "Kinetische Energie ist Bewegungsenergie.\nKinetic energy is the energy of motion.",
+    "Remarks": "Fähigkeit, Arbeit zu verrichten"
+  },
+  {
+    "German": "die Impulsänderung, -en",
+    "English": "change in momentum",
+    "Example": "Der Stoß erzeugt eine große Impulsänderung.\nThe impact creates a large change in momentum.",
+    "Remarks": "Kraftwirkung über Zeit (F = Δp/Δt)"
+  },
+  {
+    "German": "der Luftwiderstand, ¨-e",
+    "English": "air resistance",
+    "Example": "Der Luftwiderstand steigt mit der Geschwindigkeit.\nAir resistance increases with speed.",
+    "Remarks": "Reibungskraft durch Luftbewegung"
+  },
+  {
+    "German": "Hooke'sches Gesetz",
+    "English": "Hooke's Law",
+    "Example": "Das Hooke'sche Gesetz beschreibt den linearen Zusammenhang zwischen Spannung und Dehnung in einem elastischen Material.\nHooke's law describes the linear relationship between stress and strain in an elastic material.",
+    "Remarks": ""
+  },
+  {
+    "German": "Poissonzahl (ν)",
+    "English": "Poisson's ratio",
+    "Example": "Die Poissonzahl beschreibt das Verhältnis der Querdehnung zur Längsdehnung, wenn ein Material gedehnt wird.\nThe Poisson's ratio describes the ratio of transverse strain to longitudinal strain when a material is stretched.",
+    "Remarks": "transverse contraction vs longitudinal extension"
+  },
+  {
+    "German": "Bruchmechanik",
+    "English": "Fracture mechanics for crack analysis",
+    "Example": "Die Bruchmechanik untersucht das Verhalten von Materialien mit Rissen und hilft vorherzusagen, wann ein Material versagt.\nFracture mechanics studies the behavior of materials with cracks and helps predict when a material will fail.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Spannung, -en",
+    "English": "stress",
+    "Example": "Die Spannung beträgt 350 MPa.\nThe stress is 350 MPa.",
+    "Remarks": "σ = F / A (Kraft pro Fläche)\nForce per unit area."
+  },
+  {
+    "German": "die Dehnung, -en",
+    "English": "strain",
+    "Example": "Die Dehnung liegt bei 0,015 mm/mm.\nThe strain is 0.015 mm/mm.",
+    "Remarks": "ε = dL/L0 (relative length change)"
+  },
+  {
+    "German": "das Elastizitätsmodul, -e\n(E-Modul)",
+    "English": "Young's modulus",
+    "Example": "Der E-Modul von Stahl beträgt etwa 210 GPa.\nThe Young's modulus of steel is approx. 210 GPa.",
+    "Remarks": "Steigung der elastischen Kurve, Maß für Steifigkeit.\nSlope of the elastic region."
+  },
+  {
+    "German": "die Proportionalitätsgrenze, -n",
+    "English": "proportional limit",
+    "Example": "Bis zur Proportionalitätsgrenze folgt das Material Hooke's Gesetz.\nUp to the proportional limit, the material follows Hooke's law.",
+    "Remarks": "Letzter Punkt mit linearer Beziehung zwischen Spannung und Dehnung."
+  },
+  {
+    "German": "die Streckgrenze, -n",
+    "English": "yield strength (or offset yield point)",
+    "Example": "Die Streckgrenze von Baustahl liegt bei etwa 235 MPa.\nThe yield strength of structural steel is around 235 MPa.",
+    "Remarks": "Spannung, bei der das Material plastisch wird."
+  },
+  {
+    "German": "der Fließbereich, -e",
+    "English": "yield plateau",
+    "Example": "Im Fließbereich bleibt die Spannung nahezu konstant.\nIn the yield plateau, the stress remains nearly constant.",
+    "Remarks": "Bereich, in dem sich das Material ohne Spannungsanstieg plastisch verformt."
+  },
+  {
+    "German": "die plastische Verformung, -en",
+    "English": "plastic deformation",
+    "Example": "Die plastische Verformung bleibt nach Entlastung bestehen.\nPlastic deformation remains after unloading.",
+    "Remarks": "Permanente Formänderung nach Überschreiten der Streckgrenze."
+  },
+  {
+    "German": "die Zugfestigkeit, -en (Rm)",
+    "English": "tensile strength",
+    "Example": "Die Zugfestigkeit von Aluminium liegt bei ca. 300 MPa.\nThe tensile strength of aluminum is about 300 MPa.",
+    "Remarks": "Höchste Spannung, die ein Material aushält, bevor es versagt."
+  },
+  {
+    "German": "die Gleichmaßdehnung, -en",
+    "English": "uniform elongation",
+    "Example": "Die Gleichmaßdehnung beschreibt die gleichmäßige Dehnung.\nUniform elongation describes the uniform strain before necking.",
+    "Remarks": "Dehnung bis zum Beginn der Einschnürung."
+  },
+  {
+    "German": "die Einschnürung, -en",
+    "English": "necking",
+    "Example": "Vor dem Bruch tritt eine deutliche Einschnürung auf.\nSignificant necking occurs before fracture.",
+    "Remarks": "Lokale Querschnittsverringerung vor Bruch."
+  },
+  {
+    "German": "die Bruchdehnung, -en",
+    "English": "fracture strain",
+    "Example": "Die Bruchdehnung ist ein Maß für die Duktilität.\nFracture strain is a measure of ductility.",
+    "Remarks": "Gesamte Dehnung bis zum Versagen."
+  },
+  {
+    "German": "die Bruchspannung, -en",
+    "English": "fracture stress",
+    "Example": "Die Bruchspannung war geringer als die Zugfestigkeit.\nFracture stress was lower than the tensile strength.",
+    "Remarks": "Spannung am Punkt des Materialversagens."
+  },
+  {
+    "German": "das Spannungs-Dehnungs-Diagramm, -e",
+    "English": "stress-strain diagram",
+    "Example": "Das Spannungs-Dehnungs-Diagramm zeigt das Materialverhalten deutlich.\nThe stress-strain diagram clearly shows the material behavior.",
+    "Remarks": "Grafische Darstellung von Spannung vs. Dehnung."
+  },
+  {
+    "German": "das spröde Verhalten, -",
+    "English": "brittle behavior",
+    "Example": "Glas zeigt ein sprödes Verhalten.\nGlass shows brittle behavior.",
+    "Remarks": "Kaum plastische Verformung, schneller Bruch."
+  },
+  {
+    "German": "das duktile Verhalten, -",
+    "English": "ductile behavior",
+    "Example": "Stahl zeigt typischerweise ein duktiles Verhalten.\nSteel typically shows ductile behavior.",
+    "Remarks": "Hohe plastische Verformung vor dem Bruch."
+  },
+  {
+    "German": "die Strukturmechanik, -\n(usually no plural)",
+    "English": "structural mechanics",
+    "Example": "Strukturmechanik ist die Grundlage der Festigkeitsanalyse.\nStructural mechanics is the basis of strength analysis.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Belastungsart, -en",
+    "English": "type of loading",
+    "Example": "Die Belastungsart ist zyklisch.\nThe type of loading is cyclic.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Zugbelastung, -en",
+    "English": "tensile load",
+    "Example": "Das Bauteil hält einer Zugbelastung stand.\nThe component withstands a tensile load.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Druckbelastung, -en",
+    "English": "compressive load",
+    "Example": "Die Druckbelastung führt zu Instabilität.\nCompressive loading leads to instability.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Biegebelastung, -en",
+    "English": "bending load",
+    "Example": "Die Biegebelastung ist entscheidend für Balken.\nBending load is critical for beams.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Torsionsbelastung, -en",
+    "English": "torsional load",
+    "Example": "Die Welle erfährt eine Torsionsbelastung.\nThe shaft experiences torsional loading.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Fließverhalten, -\n(no plural)",
+    "English": "flow behavior (plasticity)",
+    "Example": "Das Fließverhalten beeinflusst die Umformung.\nFlow behavior influences forming.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Duktilität, -en",
+    "English": "ductility",
+    "Example": "Ein duktiles Material kann sich plastisch verformen.\nA ductile material can plastically deform.",
+    "Remarks": ""
+  },
+  {
+    "German": "spröde",
+    "English": "brittle",
+    "Example": "Das Glas ist ein sprödes Material.\nGlass is a brittle material.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Spannungsniveau, -s",
+    "English": "stress level",
+    "Example": "Das Spannungsniveau liegt unterhalb der Streckgrenze.\nThe stress level is below the yield point.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Kraft-Zeit-Diagramm, -e",
+    "English": "force-time diagram",
+    "Example": "Das Kraft-Zeit-Diagramm zeigt den Verlauf beim Crash.\nThe force-time diagram shows the crash behavior.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Impulsmoment, -e",
+    "English": "moment of momentum",
+    "Example": "Das Impulsmoment wird bei der Rotation berücksichtigt.\nThe moment of momentum is considered during rotation.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Stoßenergie, -n",
+    "English": "impact energy",
+    "Example": "Die Stoßenergie wurde vollständig absorbiert.\nThe impact energy was fully absorbed.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Verzögerungsverlauf, -¨e",
+    "English": "deceleration curve",
+    "Example": "Der Verzögerungsverlauf wurde in LS-DYNA simuliert.\nThe deceleration curve was simulated in LS-DYNA.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Lastpfad, -e",
+    "English": "load path",
+    "Example": "Die Konstruktion optimiert den Lastpfad.\nThe design optimizes the load path.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Energieabsorptionsvermögen\n(no plural used)",
+    "English": "energy absorption capability",
+    "Example": "Das Bauteil besitzt ein hohes Energieabsorptionsvermögen.\nThe component has high energy absorption capability.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Instabilitätsverhalten, - \n(no plural used)",
+    "English": "instability behavior",
+    "Example": "Das Instabilitätsverhalten wurde in der Analyse berücksichtigt.\nInstability behavior was considered in the analysis.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Ausfallursache, -n",
+    "English": "failure cause",
+    "Example": "Die Ausfallursache war eine Materialermüdung.\nThe failure cause was material fatigue.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Crashbox, -en",
+    "English": "crash box",
+    "Example": "Die Crashbox schützt den Innenraum.\nThe crash box protects the interior.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Sicherheitsgurt, -e",
+    "English": "seatbelt",
+    "Example": "Der Sicherheitsgurt reduziert die Belastung beim Aufprall.\nThe seatbelt reduces loading during impact.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Energieabsorption, -",
+    "English": "energy absorption",
+    "Example": "Die Energieabsorption ist in der Motorhaube des Autos hoch.\nThe energy absorption in the hood of the car is high.",
+    "Remarks": "critical in crash design"
+  },
+  {
+    "German": "die Knautschzone, -n",
+    "English": "crumple zone",
+    "Example": "Die Knautschzone ist entscheidend für die Analyse der Aufprallsituation.\nThe crumple zone is crucial for analyzing the impact situation.",
+    "Remarks": "crumple zones modeled in simulations"
+  },
+  {
+    "German": "die Explizite Dynamik, -",
+    "English": "explicit dynamics",
+    "Example": "Die explizite dynamische Studie ist die Grundlage der FEM.\nThe explicit dynamic study is the basis of the FEM.",
+    "Remarks": "For short-time high-deformation events\n(LS-DYNA, PAM-CRASH)"
+  },
+  {
+    "German": "das Materialmodell, -e",
+    "English": "material model",
+    "Example": "Im Rahmen meiner Masterarbeit habe ich das Materialmodell eines Klebstoffs untersucht.\nDuring my Master's thesis, I investigated the material model of an adhesive.",
+    "Remarks": "Johnson-Cook, Cowper-Symonds"
+  },
+  {
+    "German": "die Festigkeit, -en",
+    "English": "strength",
+    "Example": "Die Festigkeit der Verbindung muss nachgewiesen werden.\nThe strength of the joint must be verified.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Werkstoff, -e",
+    "English": "material",
+    "Example": "Dieser Werkstoff ist für hohe Temperaturen geeignet.\nThis material is suitable for high temperatures.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Belastung, -en",
+    "English": "load / loading",
+    "Example": "Die maximale Belastung liegt bei 10 kN.\nThe maximum load is 10 kN.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Beanspruchung, -en",
+    "English": "stress/load (operational)",
+    "Example": "Das Bauteil ist einer dynamischen Beanspruchung ausgesetzt.\nThe component is exposed to dynamic loading.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Schwingung, -en",
+    "English": "vibration",
+    "Example": "Die Schwingung wurde mit einem Sensor gemessen.\nThe vibration was measured using a sensor.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Eigenfrequenz, -en",
+    "English": "natural frequency",
+    "Example": "Die Eigenfrequenz liegt bei 120 Hz.\nThe natural frequency is 120 Hz.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Dämpfung, -en",
+    "English": "damping",
+    "Example": "Das System benötigt mehr Dämpfung.\nThe system needs more damping.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Geräuschentwicklung, -en",
+    "English": "noise emission",
+    "Example": "Die Geräuschentwicklung wurde reduziert.\nThe noise emission was reduced.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Verformung, -en",
+    "English": "deformation",
+    "Example": "Die Verformung ist innerhalb der Toleranz.\nThe deformation is within tolerance.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Finite-Elemente-Verfahren, -\n(no plural used)",
+    "English": "Finite Element Method (FEM)",
+    "Example": "Die Berechnung erfolgte mit dem Finite-Elemente-Verfahren.\nThe calculation was done using the finite element method.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Spannungskonzentration, -en",
+    "English": "stress concentration",
+    "Example": "An der Kante tritt eine hohe Spannungskonzentration auf.\nA high stress concentration occurs at the edge.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Sicherheitsfaktor, -en",
+    "English": "safety factor",
+    "Example": "Der Sicherheitsfaktor beträgt 1,5.\nThe safety factor is 1.5.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Aufprall, -e",
+    "English": "impact",
+    "Example": "Beim Aufprall entstehen große Kräfte.\nLarge forces arise during impact.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Crashtest, -s",
+    "English": "crash test",
+    "Example": "Der Crashtest wurde erfolgreich durchgeführt.\nThe crash test was successfully carried out.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Versagensgrenze, -n",
+    "English": "failure limit",
+    "Example": "Das Bauteil hat die Versagensgrenze überschritten.\nThe part exceeded its failure limit.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Spannung-Dehnungs-Kurve, -n",
+    "English": "stress-strain curve",
+    "Example": "Die Spannung-Dehnungs-Kurve zeigt ein duktiles Verhalten.\nThe stress-strain curve shows ductile behavior.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Werkstoffkennwert, -e",
+    "English": "material property",
+    "Example": "Die Werkstoffkennwerte sind im Datenblatt angegeben.\nThe material properties are listed in the datasheet.",
+    "Remarks": ""
+  },
+  {
+    "German": "die FEM-Meshqualität, -en",
+    "English": "mesh quality",
+    "Example": "Die FEM-Meshqualität beeinflusst die Genauigkeit.\nMesh quality affects accuracy.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Netz, -e",
+    "English": "mesh",
+    "Example": "Das Netz ist ein zentraler Bestandteil der Finite-Elemente-Methode und beeinflusst die Genauigkeit der Analyse.\nThe mesh is a central component of the finite element method and influences the accuracy of the analysis.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Vernetzung, -en",
+    "English": "mesh",
+    "Example": "Die Vernetzung eines komplexen Bauteils erfordert besondere Aufmerksamkeit, um stabile Berechnungsergebnisse zu erhalten.\nThe meshing of a complex component requires special attention to achieve stable calculation results.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Rechenmodell, -e",
+    "English": "simulation model",
+    "Example": "Das Rechenmodell bildet die physikalischen Eigenschaften und Randbedingungen des realen Systems ab.\nThe computational model represents the physical properties and boundary conditions of the real system.",
+    "Remarks": ""
+  },
+  {
+    "German": "die nichtlineare Analyse, -n",
+    "English": "nonlinear analysis",
+    "Example": "Eine nichtlineare Analyse ist notwendig, wenn große Verformungen oder Materialversagen berücksichtigt werden müssen.\nA nonlinear analysis is necessary when large deformations or material failure must be considered.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Solververhalten, -\n(no plural used)",
+    "English": "solver behavior",
+    "Example": "Das Solververhalten beeinflusst maßgeblich die Konvergenz und Rechenzeit der Simulation.\nThe solver behavior significantly influences the convergence and computation time of the simulation.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Randbedingung, -en",
+    "English": "boundary condition",
+    "Example": "Die Randbedingung wurde als festgelegt definiert.\nThe boundary condition was defined as fixed.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Anfangsbedingung, -en",
+    "English": "initial condition",
+    "Example": "Die Anfangsbedingung ist Nullverformung.\nThe initial condition is zero deformation.",
+    "Remarks": ""
+  },
+  {
+    "German": "das FEM-Netz, -e",
+    "English": "FEM mesh",
+    "Example": "Das FEM-Netz besteht aus Hexa-Elementen.\nThe FEM mesh consists of hexa elements.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Volumenelement, -e",
+    "English": "solid element",
+    "Example": "Wir verwenden Volumenelemente für die 3D-Struktur.\nWe use solid elements for the 3D structure.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Schalenelement, -e",
+    "English": "shell element",
+    "Example": "Schalenelemente werden bei dünnen Strukturen verwendet.\nShell elements are used for thin structures.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Kontaktelement, -e",
+    "English": "contact element",
+    "Example": "Kontaktelemente definieren das Aufeinandertreffen.\nContact elements define interactions.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Konvergenz, -en",
+    "English": "convergence",
+    "Example": "Die Konvergenz wurde nach 20 Iterationen erreicht.\nConvergence was achieved after 20 iterations.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Solvermodell, -e",
+    "English": "solver model",
+    "Example": "Das Solvermodell basiert auf impliziter Lösung.\nThe solver model is based on implicit solution.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Lösungsalgorithmus, -men",
+    "English": "solution algorithm",
+    "Example": "Der Lösungsalgorithmus verwendet Newton-Raphson.\nThe solution algorithm uses Newton-Raphson.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Gitterfeinheitsniveau, -s",
+    "English": "mesh refinement level",
+    "Example": "Ein hohes Gitterfeinheitsniveau verbessert die Genauigkeit.\nA high mesh refinement level improves accuracy.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Iteration, -en",
+    "English": "iteration",
+    "Example": "Die Berechnung läuft in 50 Iterationen.\nThe calculation runs in 50 iterations.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Berechnungszeit, -en",
+    "English": "computation time",
+    "Example": "Die Berechnungszeit beträgt 12 Stunden.\nComputation time is 12 hours.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Rechenserver, -",
+    "English": "computation server",
+    "Example": "Die Simulation läuft auf einem leistungsstarken Rechenserver.\nThe simulation runs on a high-performance computation server.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Preprocessing, -s",
+    "English": "preprocessing",
+    "Example": "Das Preprocessing erfolgt in HyperMesh.\nPreprocessing is done in HyperMesh.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Postprocessing, -s",
+    "English": "postprocessing",
+    "Example": "Das Postprocessing zeigt die Ergebnisse in 3D.\nPostprocessing shows the results in 3D.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Ergebnisauswertung, -en",
+    "English": "result evaluation",
+    "Example": "Die Ergebnisauswertung erfolgt mit ANSA.\nResult evaluation is done using ANSA.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Materialdefinition, -en",
+    "English": "material definition",
+    "Example": "Die Materialdefinition erfolgt über das Spannungs-Dehnungsverhalten.\nThe material definition is based on stress-strain behavior.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Lastkollektiv, -e",
+    "English": "load spectrum",
+    "Example": "Das Lastkollektiv berücksichtigt reale Belastungen.\nThe load spectrum considers real-world loading.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Sensitivitätsanalyse, -n",
+    "English": "sensitivity analysis",
+    "Example": "Die Sensitivitätsanalyse zeigt kritische Parameter.\nSensitivity analysis shows critical parameters.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Robustheitsbewertung, -en",
+    "English": "robustness evaluation",
+    "Example": "Die Robustheitsbewertung ist für Serienprodukte entscheidend.\nRobustness evaluation is crucial for series production.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Geräuschanalyse, -n",
+    "English": "noise analysis",
+    "Example": "Die Geräuschanalyse zeigte hohe Frequenzspitzen.\nThe noise analysis revealed high frequency peaks.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Frequenzspektrum, -en",
+    "English": "frequency spectrum",
+    "Example": "Das Frequenzspektrum reicht bis 2 kHz.\nThe frequency spectrum reaches up to 2 kHz.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Resonanzfrequenz, -en",
+    "English": "resonance frequency",
+    "Example": "Die Resonanzfrequenz liegt bei 80 Hz.\nThe resonance frequency is at 80 Hz.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Übertragungsfunktion, -en",
+    "English": "transfer function",
+    "Example": "Die Übertragungsfunktion zeigt die Systemantwort.\nThe transfer function shows the system response.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Körperschallübertragung, -en",
+    "English": "structure-borne sound transmission",
+    "Example": "Die Körperschallübertragung wurde reduziert.\nStructure-borne sound transmission was reduced.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Luftschallemission, -en",
+    "English": "airborne noise emission",
+    "Example": "Die Luftschallemission wurde mit Mikrofonen gemessen.\nThe airborne noise was measured using microphones.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Steifigkeit, -en",
+    "English": "stiffness",
+    "Example": "Die Steifigkeit der Struktur beträgt 10⁶ N/m.\nThe stiffness of the structure is 10⁶ N/m.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Modalanalyse, -n",
+    "English": "modal analysis",
+    "Example": "Die Modalanalyse liefert Eigenfrequenzen und -formen.\nModal analysis provides natural frequencies and mode shapes.",
+    "Remarks": "To find Eigenfrequenzen"
+  },
+  {
+    "German": "die Eigenform, -en",
+    "English": "mode shape",
+    "Example": "Die erste Eigenform zeigt Biegeschwingungen.\nThe first mode shape shows bending vibrations.",
+    "Remarks": ""
+  },
+  {
+    "German": "die PSD-Analyse, -n",
+    "English": "power spectral density analysis",
+    "Example": "Die PSD-Analyse identifiziert dominante Frequenzen.\nPSD analysis identifies dominant frequencies.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Rauschunterdrückung, -en",
+    "English": "noise suppression",
+    "Example": "Das System zur Rauschunterdrückung ist aktiv.\nThe noise suppression system is active.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Lager, -",
+    "English": "bearing",
+    "Example": "Das Lager verursacht zusätzliche Vibrationen.\nThe bearing causes additional vibrations.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Dämpfungsrate, -n",
+    "English": "damping ratio",
+    "Example": "Eine höhere Dämpfungsrate reduziert die Schwingung.\nA higher damping ratio reduces vibration.",
+    "Remarks": ""
+  },
+  {
+    "German": "das dynamische Verhalten, -",
+    "English": "dynamic behavior",
+    "Example": "Das dynamische Verhalten wurde mit Abaqus analysiert.\nThe dynamic behavior was analyzed with Abaqus.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Frequenzanalyse, -n",
+    "English": "frequency analysis",
+    "Example": "Die Frequenzanalyse zeigt ein Maximum bei 150 Hz.\nThe frequency analysis shows a peak at 150 Hz.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Schallisolierung, -en",
+    "English": "sound insulation",
+    "Example": "Gute Schallisolierung verbessert den Komfort.\nGood sound insulation improves comfort.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Strukturkopplung, -en",
+    "English": "structural coupling",
+    "Example": "Strukturkopplung beeinflusst die NVH-Leistung.\nStructural coupling affects NVH performance.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Systemantwort, -en",
+    "English": "system response",
+    "Example": "Die Systemantwort wurde unter Stoßlast analysiert.\nThe system response was analyzed under shock load.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Akustikmodell, -e",
+    "English": "acoustic model",
+    "Example": "Das Akustikmodell basiert auf einem FE-Netz.\nThe acoustic model is based on a FE mesh.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Frequenzgangmessung, -en",
+    "English": "frequency response measurement",
+    "Example": "Die Frequenzgangmessung wurde am Prüfstand durchgeführt.\nFrequency response measurement was done on the test bench.",
+    "Remarks": ""
+  },
+  {
+    "German": "das Einschwingverhalten \n(pl. die Einschwingvorgänge)",
+    "English": "Transient Response",
+    "Example": "Wann werden die Einschwingvorgänge durchgeführt?\nWhen are the transient response performed?",
+    "Remarks": "Time-domain simulations"
+  },
+  {
+    "German": "die Akustiksimulation, -en",
+    "English": "acoustic simulation",
+    "Example": "Die Akustiksimulation wird in der NVH-Analyse durchgeführt.\nThe acoustic simulation is carried out in the NVH analysis.",
+    "Remarks": "For cabin/passenger noise"
+  },
+  {
+    "German": "die Entkopplung, -en",
+    "English": "decoupling",
+    "Example": "Die Entkopplung ist eine Technik der bedarfsgesteuerten Materialbedarfsplanung, die eine Unabhängigkeit zwischen Materialbereitstellung und -verwendung ermöglicht.\nDecoupling is a technique used for demand-driven material requirements planning , capable of creating independence between the provision of material and its use.",
+    "Remarks": "decoupling strategies (z.B. Gummilager)"
+  },
+  {
+    "German": "das Metall, -e",
+    "English": "metal",
+    "Example": "Ich habe ein schönes Regal aus Holz und Metall gebaut.\nI built a nice shelf out of wood and metal.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Stahl, ¨-e",
+    "English": "Steel",
+    "Example": "Stahl wird häufig für tragende Teile verwendet.\nSteel is often used for load-bearing components.",
+    "Remarks": "Metalllegierung"
+  },
+  {
+    "German": "der Edelstahl, -e",
+    "English": "Stainless steel",
+    "Example": "Edelstahl ist rostfrei und langlebig.\nStainless steel is rust-resistant and durable.",
+    "Remarks": "Korrosionsbeständig"
+  },
+  {
+    "German": "das Aluminium, -e",
+    "English": "Aluminum",
+    "Example": "Aluminium reduziert das Gesamtgewicht.\nAluminum reduces overall weight.",
+    "Remarks": "Leichtmetall"
+  },
+  {
+    "German": "das Kupfer, - (usually no plural)",
+    "English": "Copper",
+    "Example": "Kupfer leitet Strom sehr gut.\nCopper conducts electricity very well.",
+    "Remarks": "Metall"
+  },
+  {
+    "German": "das Messing, -e",
+    "English": "Brass",
+    "Example": "Messing wird für Ventile verwendet.\nBrass is used for valves.",
+    "Remarks": "Kupfer-Zink-Legierung"
+  },
+  {
+    "German": "das Gusseisen, - (no plural)",
+    "English": "Cast iron",
+    "Example": "Gusseisen ist spröde aber stabil.\nCast iron is brittle but strong.",
+    "Remarks": "Eisenlegierung"
+  },
+  {
+    "German": "das Titan, -e",
+    "English": "Titanium",
+    "Example": "Titan hat ein gutes Festigkeit-Gewicht-Verhältnis.\nTitanium has a great strength-to-weight ratio.",
+    "Remarks": "Hochleistungsmetall"
+  },
+  {
+    "German": "der Kunststoff, -e",
+    "English": "Plastic / Polymer",
+    "Example": "Kunststoffe sind leicht und günstig.\nPlastics are light and cost-effective.",
+    "Remarks": "Thermoplast/Elastomer"
+  },
+  {
+    "German": "das Polyethylen, -e (PE)",
+    "English": "Polyethylene",
+    "Example": "PE ist chemikalienresistent.\nPE is chemical-resistant.",
+    "Remarks": "Thermoplast"
+  },
+  {
+    "German": "das Polypropylen, -e (PP)",
+    "English": "Polypropylene",
+    "Example": "PP wird in Stoßfängern verwendet.\nPP is used in bumpers.",
+    "Remarks": "Thermoplast"
+  },
+  {
+    "German": "das Polycarbonat, -e (PC)",
+    "English": "Polycarbonate",
+    "Example": "Polycarbonat ist schlagfest.\nPolycarbonate is impact-resistant.",
+    "Remarks": "Thermoplast"
+  },
+  {
+    "German": "der Verbundwerkstoff, -e",
+    "English": "Composite material",
+    "Example": "Verbundwerkstoffe bieten hohe Steifigkeit bei geringem Gewicht.\nComposites offer high stiffness with low weight.",
+    "Remarks": "Faser-Kunststoffverbund"
+  },
+  {
+    "German": "der glasfaserverstärkte Kunststoff, -e (GFK)",
+    "English": "Glass fiber reinforced plastic (GFRP)",
+    "Example": "GFK ist leicht und stabil.\nGFRP is lightweight and strong.",
+    "Remarks": "Verbundwerkstoff"
+  },
+  {
+    "German": "die Kohlenstofffaser, -n (CFK)",
+    "English": "Carbon fiber reinforced plastic (CFRP)",
+    "Example": "CFK hat exzellente Festigkeit bei niedrigem Gewicht.\nCFRP has excellent strength at low weight.",
+    "Remarks": "Hochleistungsverbund"
+  },
+  {
+    "German": "die Keramik, -en",
+    "English": "Ceramic",
+    "Example": "Keramik hält hohe Temperaturen aus.\nCeramic withstands high temperatures.",
+    "Remarks": "Nichtmetallisch"
+  },
+  {
+    "German": "der Gummi, -s",
+    "English": "Rubber",
+    "Example": "Gummi wird zur Schwingungsdämpfung verwendet.\nRubber is used for vibration damping.",
+    "Remarks": "Elastomer"
+  },
+  {
+    "German": "der Schaumstoff, -e",
+    "English": "Foam",
+    "Example": "Schaumstoffe isolieren gut.\nFoams provide good insulation.",
+    "Remarks": "Polymerstruktur"
+  },
+  {
+    "German": "das Holz, ¨-er",
+    "English": "Wood",
+    "Example": "Holz wird manchmal für Modelle verwendet.\nWood is sometimes used for prototyping.",
+    "Remarks": "Naturmaterial"
+  },
+  {
+    "German": "der Beton, -e",
+    "English": "Concrete",
+    "Example": "Beton ist druckfest.\nConcrete is strong in compression.",
+    "Remarks": "Verbundwerkstoff"
+  },
+  {
+    "German": "der Klebstoff, -e",
+    "English": "Glue",
+    "Example": "Der Klebstoff hält die Teile fest zusammen.\nThe adhesive holds the parts firmly together.",
+    "Remarks": "Verbindungsmaterial"
+  },
+  {
+    "German": "das Dichtmittel, -",
+    "English": "Sealant",
+    "Example": "Das Dichtmittel wurde verwendet, um das Leck zu schließen.\nThe sealant was used to close the leak.",
+    "Remarks": "Dichtungsmaterial"
+  },
+  {
+    "German": "",
+    "English": "",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "",
+    "English": "",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "Material Classifications",
+    "English": "",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Metalle ",
+    "English": "metals",
+    "Example": "Stahl, Aluminium, Titan, Kupfer sind Metalle.\nSteel, aluminum, titanium and copper are metals.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Polymere / Kunststoffe",
+    "English": "polymers/plastics",
+    "Example": "PE, PP, PC, PVC sind Polymere/Kunststoffe.\nPE, PP, PC, PVC are polymers/plastics.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Verbundwerkstoffe /\ndie Kompositmaterialien",
+    "English": "composite materials",
+    "Example": "GFK, CFK sind Verbundwerkstoffe.\nGFRP and CFRP are composite materials.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Nichtmetalle / Naturstoffe",
+    "English": "non-metals / natural materials",
+    "Example": "Keramik, Holz sind Nichtmetalle/Naturstoffe.\nCeramics and wood are non-metals/natural materials.",
+    "Remarks": ""
+  },
+  {
+    "German": "die Funktionsmaterialien",
+    "English": "functional materials",
+    "Example": "Schäume, Gummi, Elastomere sind Funktionsmaterialien.\nFoams, rubber and elastomers are functional materials.",
+    "Remarks": ""
+  }
+]

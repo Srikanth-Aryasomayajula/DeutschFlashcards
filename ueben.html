@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Deutsch Flashcards – Üben</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  <script src="xlsx.full.min.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="vokabular.js" defer></script>
+  <script src="ueben.js" defer></script>
+</head>
+
+<body class="bg-text">
+  <div id="navbar-placeholder"></div>
+
+  <main class="main-content">
+    <h1 class="main-title">Üben</h1>
+
+    <!-- Hidden elements required for shared JS -->
+    <div id="dropdownOptions" style="display: none;"></div>
+    <div id="dropdownHeader" style="display: none;">Header</div>
+    <table id="vocabTable" style="display: none;">
+      <tbody></tbody>
+    </table>
+    <button id="displayTableBtn" style="display: none;"></button>
+    <button id="clearSelection" style="display: none;"></button>
+
+    <!-- Practice source selector -->
+    <section id="sourceSelector">
+      <div class="checkbox-row">
+        <label><input type="radio" name="category" value="Vokabular" /> Vokabular</label>
+        <label><input type="radio" name="category" value="Grammatik" /> Grammatik</label>
+        <label><input type="radio" name="category" value="Maschinenbau" /> Maschinenbau</label>
+        <label><input type="radio" name="category" value="Führerschein" /> Führerschein</label>
+      </div>
+      <button id="loadPracticeBtn" class="loadPracticeBtn">Start Practice</button>
+    </section>
+
+    <!-- Area to show practice content -->
+    <div id="practiceArea"></div>
+  </main>
+  <div id="footer-placeholder"></div>
+</body>
+</html>

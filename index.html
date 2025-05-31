@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deutsch Flashcards</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script defer src="script.js"></script>
+  <!-- <meta http-equiv="refresh" content="10; URL=vokabular.html" /> -->
+</head>
+
+<body class="bg-text">
+  <div id="navbar-placeholder"></div>
+
+  <div class="content-wrapper">
+    <!-- Left column (sidebar) -->
+    <div class="sidebar">
+      <h2>German Audio Sources</h2>
+      <ul>
+        <li><a href="https://learngerman.dw.com/de/langsam-gesprochene-nachrichten/s-60040332" target="_blank">Slow German News by DW</a></li>
+        <li><a href="https://www.youtube.com/playlist?list=PLs7zUO7VPyJ5DV1iBRgSw2uDl832n0bLg" target="_blank">Nicos Weg DW - YouTube</a></li>
+        <li><a href="https://www.youtube.com/watch?v=MOtqMNKs0Jw&list=PLYzp2xhTw9W1Z9RvnCoveC0W7pkwUMHXy/" target="_blank">Learn German with Anja - YouTube</a></li>
+        <li><a href="https://slowgerman.com/" target="_blank">Slow German</a></li>
+        <li><a href="https://open.spotify.com/search/deutsch%20lernen" target="_blank">German Podcasts on Spotify</a></li>
+        <li><a href="https://www.germanpod101.com/" target="_blank">GermanPod101</a></li>
+      </ul>
+      <br>
+      <h2>DeutschFlashcards Database</h2>
+      <p>Download the entire DeutschFlashcards database here for free</p>
+      <ul>
+        <li><a href="Vocabulary.xlsx" target="_blank">Download</a></li>
+      </ul>
+    </div>
+
+    <!-- Right column (main content + contact form) -->
+  <div class = "right-column">
+    <main class="how-to-use-main">
+      <div>
+        <h1 class="main-title" align="center">Willkommen bei Deutsch Flashcards</h1>
+        <p>
+          Explore the menus – <strong>Vokabular</strong> (select your level), <strong>Grammatik</strong>, 
+          <strong>Maschinenbau</strong>, and <strong>Führerschein</strong> to learn German using interactive flashcards.<br><br>
+          Practice your skills in the <strong>Üben</strong> section. Easy to use and fun to learn!
+        </p>
+        <p>
+          Whether you're a complete beginner or brushing up advanced skills, this site is designed to support your journey.<br><br>
+          Consistent practice and exposure to real-world vocabulary will boost your confidence quickly.<br><br>
+          Viel Erfolg – and enjoy learning!
+        </p>
+      </div>
+    </main>
+          <!-- Contact form placed below main content -->
+      <form class="contact-form" action="https://formspree.io/f/mvgayrbv" method="POST">
+        <h2 class="form-title">Kontaktformular</h2>
+      
+        <label for="name">Ihr Name<span class="required-star">*</span>:</label>
+        <input type="text" id="name" name="name" required>
+      
+        <label for="email">Ihre E-Mail<span class="required-star">*</span>:</label>
+        <input type="email" id="email" name="email" required>
+      
+        <label for="message">Ihre Nachricht<span class="required-star">*</span>:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+        <p class="required-note"><span class="required-star">*</span>erforderlich</p>
+      
+        <button type="submit" class="menu-button">Absenden</button>
+    
+      </form>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+</body>
+</html>

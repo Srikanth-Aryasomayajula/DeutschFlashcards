@@ -1,0 +1,969 @@
+body {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  font-family: Arial, sans-serif;
+
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-logo {
+  position: absolute;
+  left: 4rem;
+  height: 60px;
+  width: auto;           /* natural width based on height */
+  top: 50%;
+  transform: translateY(-50%) scaleX(1.5); /* stretch width by 10% */
+  transform-origin: center;
+  border-radius: 8px;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.sidebar {
+  width: 25%;
+  height: 70%;
+  background-color: #ffffff; /* White like a card */
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 0 auto; /* Adds spacing around it */
+}
+
+.sidebar ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+.sidebar a {
+  display: inline-block;
+  background-color: #4d7071; 
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+
+  min-width: 100px;        /* Minimum width for smallest buttons */
+  max-width: 100%;         /* Prevents overflow */
+  width: 100%;             /* Uniform width based on longest button */
+  box-sizing: border-box;  /* Includes padding in width calculation */
+}
+
+.sidebar a:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.right-column {
+  width: 70%;
+  height: 70%;
+  text-align: justify;
+  background-color: transparent; /* fully transparent */
+  padding: 0;                   /* no padding */
+  box-sizing: border-box;
+  overflow-y: auto;
+  border: none;                /* no border */
+  box-shadow: none;            /* no shadow */
+  border-radius: 0;            /* no rounding */
+  margin: 0;                   /* no margin */
+}
+
+.how-to-use-main {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  width: 100%;
+  text-align: justify;
+  max-width: 600px;
+  margin: 0 0 2rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #333;
+}
+
+.contact-form {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  font-family: inherit;
+  color: #333;
+}
+
+.contact-form h2.form-title {
+  text-align: center;
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  color: #2c3e50;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.contact-form .menu-button {
+  display: block;
+  margin-top: 1.5rem;
+  background-color: #007BFF;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.contact-form .menu-button:hover {
+  background-color: #0056b3;
+}
+
+.required-star {
+  color: red;
+  margin-left: 2px;
+}
+
+.required-note {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers all children */
+  position: relative;      /* needed for absolute positioning */
+  background-color: #000;
+  color: white;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+/* Custom background and text colors */
+.bg-text {
+  background-color: #f3f4f6;  /* Similar to bg-gray-100 */
+  color: #1f2937;  /* Similar to text-gray-800 */
+}
+
+.toggle-menu {
+  font-size: 2.5rem;
+  background: none;
+  margin-left: auto;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 0 1.5rem;
+  display: none; /* Hidden by default, shown in mobile */
+}
+
+/* Keep menus centered */
+.menu-container {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Menu link styles */
+.menu-link {
+  display: inline-block;
+  background-color: #2563eb; /* Blue background */
+  color: white; /* White text */
+  padding: 8px 16px; /* Padding around the text */
+  border-radius: 4px; /* Rounded corners */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.menu-link:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+/* Menu button styles */
+.menu-button {
+  display: inline-block;
+  background-color: #2563eb; /* Blue background */
+  color: white; /* White text */
+  padding: 8px 16px; /* Padding around the text */
+  border-radius: 4px; /* Rounded corners */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 20px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+.menu-button:hover {
+  background-color: #1d4ed8; /* Darker blue on hover */
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 85vh; 
+  align-items: center;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.file-input {
+  margin-bottom: 1rem;
+}
+
+/* Table Styles */
+.vocab-table {
+  width: max-content;
+  min-width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Scrollable container for the table */
+#vocabTable {
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+/* Scrollable container for the table */
+#maschinenbauTable {
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+/* Scrollable container for the table */
+#fuehrerscheinTable {
+  display: block;
+  overflow-x: auto;
+  overflow-y: auto;
+  max-width: 100%;
+}
+
+.vocab-table th,
+.vocab-table td {
+  font-family: inherit;
+  border: 1px solid #000;
+  padding: 8px 10px;
+  text-align: left;
+  vertical-align: top;
+  word-break: break-word;   /* Forces wrapping of long words */
+}
+
+.vocab-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  color: #333;
+}
+
+.vocab-table tbody tr:nth-child(even) {
+  background-color: #f3f6f9;
+}
+
+.vocab-table tbody tr:hover {
+  background-color: #e9f1ff;
+}
+
+/* Dropdown style */
+#levelSelect {
+  margin-bottom: 0rem;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.custom-dropdown {
+  position: relative;
+  width: 250px;
+  margin-bottom: 0rem;
+  font-size: 1rem;
+}
+
+/* Container for dropdown and buttons */
+.dropdown-container {
+  display: flex;
+  flex-direction: row; /* Align items horizontally */
+  align-items: center; /* Vertically center the items */
+  gap: 10px; /* Space between dropdown and buttons */
+  padding: 0px;
+  margin: 0;
+  flex-wrap: wrap; /* Allow wrapping if needed */
+}
+
+/* Style for the dropdown header */
+.dropdown-header {
+  background: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center; /* Vertically center the content inside */
+  justify-content: space-between; /* Align text to the left if needed */
+}
+
+/* Style for the dropdown header */
+.dropdown-header-1 {
+  position: relative; /* Required for positioning the pseudo-element */
+  background: #fff;
+  border: 1px solid #aaa; /* Inner border */
+  border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1; /* Ensure it's above the pseudo-element */
+}
+
+.dropdown-header-1::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -12px;
+  right: -12px;
+  bottom: -8px;
+  border: 1px solid #aaa; /* Outer border */
+  border-radius: 4px; /* Slightly larger radius to match inner */
+  z-index: -1; /* Push it behind the main element */
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #aaa;
+  border-top: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.dropdown-options label {
+  display: block;
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+.dropdown-options input {
+  margin-right: 8px;
+}
+
+/* Style for the buttons next to the dropdown */
+.dropdown-buttons {
+  display: flex;
+  justify-content: center;     /* Horizontally center all contents */
+  align-items: center;         /* Vertically align */
+  gap: 20px;                   /* Space between dropdown and buttons */
+  flex-wrap: wrap;             /* Wrap on small screens */
+  flex-direction: row;      /* Stack buttons and flashcards vertically */
+  width: 100%;
+}
+
+/* Optional: Adjust the button size and font */
+.dropdown-buttons button {
+  padding: 8px 18px; /* Increase padding for larger button */
+  background-color: #2563eb;
+  color: white;
+  border: 1px solid #2563eb;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1.2rem; /* Increase font size */
+  line-height: 1.5; /* Adjust line height if needed for better alignment */
+}
+
+.dropdown-buttons button:hover {
+  background-color: #1e40af;
+}
+
+.dropdown-buttons button:focus {
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.view-mode {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 2.5rem; /* Adjust the gap as needed */
+  align-items: center;
+}
+
+/* Style for the flashcard container */
+.flashcard-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.flashcard {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 800px;
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 1rem auto;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+  text-align: left;
+  overflow-x: auto;
+}
+
+.flashcard p {
+  margin: 0.5rem 0;
+}
+
+#flashcardsContainer button {
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#flashcardsContainer div {
+  width: 100%;
+}
+
+#flashcardsContainer .button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.flashcard-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+.flashcard-table th,
+.flashcard-table td {
+  padding: 0.5rem;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid #ddd;
+}
+
+.flashcard-table th {
+  width: 30%;
+  font-weight: 600;
+  color: #333;
+}
+
+.flashcard-table tr.hidden-answer {
+  display: none; /* Hide the row */
+}
+
+.flashcard-progress {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.flashcard-gram {
+  overflow-x: auto;
+  width: auto;              /* Let it size based on content */
+  max-width: calc(100vw - 100px);  /* Allow up to full screen width minus 50px per side */
+  display: inline-block;    /* Shrink-wrap to content width */
+}
+
+.flashcard-gram .flashcard-table {
+  table-layout: auto;       /* Natural column sizing */
+  width: auto;              /* Natural table width */
+  max-width: none;        
+}
+
+.flashcard-gram .flashcard-table th,
+.flashcard-gram .flashcard-table td {
+  min-width: 150px; /* Avoid overly narrow columns */
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 40px;
+}
+
+.progress-indicator {
+  margin-top: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#sourceSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.checkbox-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.checkbox-row label {
+  font-size: 1.2rem;
+  margin: 5px;
+}
+
+.loadPracticeBtn {
+  padding: 8px 18px;
+  background-color: #2563eb;
+  color: white;
+  border: 1px solid #2563eb;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.loadPracticeBtn:hover {
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+
+.blank-line {
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  min-width: 60px;
+  margin-right: 10px;
+}
+
+.option-group {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.option-group label {
+  cursor: pointer;
+}
+
+.blank-group {
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.blank-group label {
+  display: block;
+  margin: 2px 0;
+}
+
+.practice-card {
+  padding: 1rem;
+  background: #f4f4f4;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Common iframe styles for all pages */
+iframe {
+  display: block;
+  margin: 1rem auto;       /* Center horizontally with vertical spacing */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+  box-sizing: border-box;  /* include border in size */
+}
+
+/* Page-specific iframe sizing */
+
+/* Vokabular page */
+.vokabular-page iframe {
+  width: calc(100vw - 30px);
+  height: calc(100vh - 240px);
+  overflow: auto; /* allow scroll if needed */
+}
+
+/* Grammatik page */
+.grammatik-page iframe {
+  width: calc(100vw - 30px);
+  height: calc(100vh - 165px);
+  overflow: auto;
+}
+
+/* Maschinenbau page */
+.maschinenbau-page iframe {
+  width: calc(100vw - 360px);
+  height: calc(100vh - 280px);
+  overflow: hidden; /* prevent outer scrollbars */
+}
+
+/* Fuehrerschein page */
+.fuehrerschein-page iframe {
+  width: calc(100vw - 250px);
+  height: calc(100vh - 280px);
+  overflow: hidden;
+}
+
+/* Hide scrollbars and prevent scrolling on these pages */
+.maschinenbau-page body,
+.fuehrerschein-page body,
+.grammatik-page body {
+  overflow: hidden;
+}
+
+/* Allow scrolling on vokabular page */
+.vokabular-page body {
+  overflow: auto;
+}
+
+.site-footer {
+  margin-top: auto; /* pushes footer to bottom */
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  padding: 6px 0;
+  border-top: 1px solid #ddd;
+  background-color: #f9f9f9;
+  width: 100%;
+  position: relative; /* keep this or remove it, no absolute/fixed */
+  bottom: auto; /* remove bottom: 0 */
+  left: auto;
+  z-index: 100;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 767px) {
+  
+  body {
+    font-size: 80%;
+  }
+
+  .site-logo {
+    transform: translateX(-20%) translateY(-50%) scaleX(1.35) scaleY(0.9);
+  }
+  
+  .main-title {
+    font-size: 1.25rem;
+  }
+
+  .toggle-menu {
+    display: block;
+  }
+
+  /* Only for mobile and tablet */
+  .menu-container {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    right: 65px;
+    flex-direction: column;
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 1000;
+    min-width: 160px;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    transform: translateY(-10px);
+  }
+  
+  .menu-container.show-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu-button {
+    width: 85%;
+    text-align: left;
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .content-wrapper {
+    flex-direction: column; /* stack vertically */
+  }
+
+  .how-to-use-main {
+    order: 1; /* Willkommen box first */
+    margin: 0 0 1rem 0; /* adjust margins for vertical */
+    max-width: 100%;
+  }
+
+  .sidebar {
+    order: 2; /* Audio sources second */
+    width: 100%;
+    margin: 0 0 1rem 0;
+    max-height: none; /* remove fixed height if any */
+  }
+
+  .sidebar a {
+    font-size: 120%;
+  }
+  .contact-form {
+    order: 3; /* Contact form last */
+    width: 100%;
+    margin: 0;
+    max-width: 100%;
+  }
+  
+  .contact-form h2.form-title {
+    font-size: revert;
+  }
+  .contact-form .menu-button {
+    text-align: center;
+    width: auto;
+  }
+  
+  .right-column {
+    width: 100%;
+    padding: 0;
+  }
+  
+  .vocab-table {
+    overflow-x: auto;
+    display: block;
+  }
+
+  .flashcard {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+    width: 95%;
+  }
+
+  .button-wrapper {
+    flex-direction: row;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .option-group {
+    flex-direction: column;
+  }
+
+  .dropdown-header {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  .dropdown-options {
+    max-height: 500px;
+  }
+  
+  .dropdown-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+
+  .dropdown-buttons button {
+    width: 50%;
+  }
+  
+  .dropdown-buttons button {
+    width: 40%;
+    font-size: 1rem;
+  }
+
+  .custom-dropdown {
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .checkbox-row {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #sourceSelector {
+    margin-top: 0px;
+    gap: 15px;
+  }
+
+  .loadPracticeBtn {
+    margin-bottom: 20px;
+  }
+
+  .maschinenbau-page iframe {
+    width: calc(100vw - 30px);
+  }
+
+  /* Fuehrerschein page */
+.fuehrerschein-page iframe {
+  width: calc(100vw - 30px);
+}
+  
+.site-footer {
+  font-size: 8px;
+  padding: 3px 0;
+  position: relative;
+  bottom: auto;
+  left: auto;
+  z-index: 1;
+}
+}
+/* Responsive layout for smaller laptop and some tablets */
+@media (min-width: 768px) and (max-width: 1281px) {
+    /* Only for mobile and tablet */
+  .toggle-menu {
+    display: block;
+  }
+  
+  .menu-container {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    right: 65px;
+    flex-direction: column;
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 10px;
+    z-index: 1000;
+    min-width: 160px;
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    transform: translateY(-10px);
+  }
+  
+  .menu-container.show-menu {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .menu-button {
+    width: 85%;
+    text-align: left;
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+.content-wrapper {
+  width: 100vw;
+  padding: 20px 0;
+}
+
+.sidebar {
+  margin: 0 0 0 20px;
+  font-size: 90%;
+  width: 30%;
+}
+  
+.right-column {
+  width: 60%;
+}
+
+.how-to-use-main {
+  margin: 0;
+}
+
+.contact-form {
+  margin: 20px 0 0 0;
+}
+  
+.contact-form .menu-button {
+  text-align: center;
+  width: auto;
+}
+
+.flashcard {
+  padding: 0.8rem;
+  width: 95%;
+}
+}
+
+@media (hover: none) {
+  .menu-button:hover {
+    background-color: #2563eb;
+  }
+}

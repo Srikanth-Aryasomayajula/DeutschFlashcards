@@ -1,0 +1,312 @@
+[
+  {
+    "German": "Abfahrt Kontrolle",
+    "English": "Departure Check",
+    "Action to be done during Exam": "Follow the instructions and wait for next question"
+  },
+  {
+    "German": "Öffnen Sie Die Motorhaube\n\nMotorhaubenriegel",
+    "English": "Open the Hood",
+    "Action to be done during Exam": "Open the drivers door\nOn the left of the clutch pedel there will be another lever\nPull that lever\nGO to the Hood, hold it a bit up with the left hand\nSearch for the small level in the hood with the right hand and then move the lever\nCheck if it can hold it by itself, if not, look for the stand and pull it out and stick it to the hole"
+  },
+  {
+    "German": "Behälter",
+    "English": "Container / reservoir",
+    "Action to be done during Exam": "Point at it"
+  },
+  {
+    "German": "Kühlflüssigkeitsbehälter",
+    "English": "Coolant reservoir",
+    "Action to be done during Exam": "Was Füllen Sie da Rein:\nWasser + Anti freeze (Frostschutzmittel)"
+  },
+  {
+    "German": "Frostschutzmittel auch in Sommer ?",
+    "English": "Anti freeze in summer also to be filled ?",
+    "Action to be done during Exam": "Ja, because it contains rust protectors and protects the engine "
+  },
+  {
+    "German": "Worauf muüssen Sie achten, wenn Sie Behälter öffnen möchten ?",
+    "English": "What should you consider, when you want to open the reservoir",
+    "Action to be done during Exam": "The reservoir is hot usually after drive and is under pressure. And should not be filled to the maximum. Usually to be controlled when it is cold, to avoid burns\nIt is a surge tank\nIt is usually having a blue cap with max, min labels\nit is usually a round tank in most cars (can vary)"
+  },
+  {
+    "German": "",
+    "English": "How to identify which reservoir it is",
+    "Action to be done during Exam": "It usually has a warning triangle symbol or cooling water symbol (red)\nIt usually has a screw cap, to withstand the pressure"
+  },
+  {
+    "German": "Schraubverschluss",
+    "English": "Screw Cap",
+    "Action to be done during Exam": "for coolant"
+  },
+  {
+    "German": "",
+    "English": "Where can you see the type of anti rust or coolant",
+    "Action to be done during Exam": "It can be written on the tank like G13 for example is the data for anti freeze\nOr it is mentioned in the vehicle operating manual (betriebsanleitung)"
+  },
+  {
+    "German": "Scheibenwaschwasser",
+    "English": "windschield washer liquid",
+    "Action to be done during Exam": "Was Füllen Sie da Rein:\nNormal tap water and some special cleaning agent"
+  },
+  {
+    "German": "Woran erkennt man, Wieviel da rein muss ?",
+    "English": "how much to fill",
+    "Action to be done during Exam": "There are no measurements usually like min or max\nusually it can hold upto 5 litre. It can be checked in the operating manual"
+  },
+  {
+    "German": "FROSTSCHUTZSMITTEL",
+    "English": "anti freeze for \nwindschield washer liquid",
+    "Action to be done during Exam": "For Sommer windschields no FROSTSCHUTZSMITTEL\nIt can be identified by the cap, which can be easily opened unlike a coolant reservoir\nIt has a fountain(spray) symbol (Blue)"
+  },
+  {
+    "German": "Wo ist der motor",
+    "English": "Where is the engine/motor",
+    "Action to be done during Exam": "It in the middle with big block"
+  },
+  {
+    "German": "Wo füllen Sie das Öl rein",
+    "English": "Where to fill engine oil",
+    "Action to be done during Exam": "Direkt in den Motor"
+  },
+  {
+    "German": "Wie Heist das Öl",
+    "English": "how is the oil called ",
+    "Action to be done during Exam": "Motoröl\nneed to check the operating manual for the exact name/details"
+  },
+  {
+    "German": "Wieviel Öl da rein muss ?",
+    "English": "How much oil is to be filled ?\nHow to identify it?",
+    "Action to be done during Exam": "That needs to be checked with the dipstick. In small amounts of maximum 250 ml and wait and then check again. \nIt has the Yellow oil pouring symbol."
+  },
+  {
+    "German": "Wie messen Sie den Öl stand ?",
+    "English": "How do you measure the oil level?",
+    "Action to be done during Exam": "Usually using a dipstick or in the dashboard/screen.\nIt should ideally be measured before the trip or stop 10-15 mins after the trip has ended, so the oil has returned to the reservoir.\nThis avoids pouring excess oil in the reservoir.\nCheck if there is a dipstick, usually with yellow tip and a hole on top.\nPull the dipstick out. Clean it will the tip and then put it back where it originally was, and not tighten., just insert unti it stops\nThen take it out again, but do not clean it until the tip\nthere are 2 markings min and max, between these the oil should stand. that shows the level of the oil."
+  },
+  {
+    "German": "Bremsflüssigkeit",
+    "English": "Braking fluid or Brake oil ",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Wo ist der Bremsflüssigkeit",
+    "English": "Show where the brake oil reservoir is",
+    "Action to be done during Exam": "It is usually behind at the end of the hood, with Yellow octogonal nut with a circle inside braces."
+  },
+  {
+    "German": "Woran erkennt man, ob der genug flüssigkeit drin ist",
+    "English": "how can one identify if there is enough fluid ",
+    "Action to be done during Exam": "Either there is a minimum and maximum markings or the board computer shows it"
+  },
+  {
+    "German": "Was machen sie, wenn es gibt wenig flüssigkeit",
+    "English": "what do you do when there is less fluid",
+    "Action to be done during Exam": "check it with a professional, because it can be due to defective brake pads or the braking system is malfuntion"
+  },
+  {
+    "German": "luftfiltergehäuse",
+    "English": "Air filter",
+    "Action to be done during Exam": "Filters the air sending to the engine.\nIt can be identifed by the thick pipes that lead to them."
+  },
+  {
+    "German": "Reifen",
+    "English": "Tyres",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Was muss man an den Reifen Kontrollieren",
+    "English": "What needs to be checked/inspected for the tyres",
+    "Action to be done during Exam": "Air pressure\nthe tread depth\nif there are any damages on the tyres - (Beule - dent or Rissen - Cracks)"
+  },
+  {
+    "German": "",
+    "English": "Where to identify the right tyre pressure",
+    "Action to be done during Exam": "on the driver door or on the fuel tank cap"
+  },
+  {
+    "German": "",
+    "English": "How to identify Winter tyres",
+    "Action to be done during Exam": "M+S (Mud and snow) or a snow flake symbol"
+  },
+  {
+    "German": "Mindestprofiltiefe",
+    "English": "Minimum profile (tread) depth",
+    "Action to be done during Exam": "Rules are minimum 1.6 mm recommended is 3-4mm "
+  },
+  {
+    "German": "",
+    "English": "TWI",
+    "Action to be done during Exam": "Tread Wear Indicator"
+  },
+  {
+    "German": "Was müssen Sie an der Batterie überprüfen",
+    "English": "What to check at the battery",
+    "Action to be done during Exam": "Clamps are greased to keep from rusting\nThey are so tight that they are no loose contacts"
+  },
+  {
+    "German": "Welche Beleuchtung gibt es vorne",
+    "English": "What lights are in the front of the vehicle",
+    "Action to be done during Exam": "TagFahrlicht, (DRL), parking lights, low beam, high beam, side indicators, Hazardwarning light, foglight"
+  },
+  {
+    "German": "Tagfharlicht",
+    "English": "Daytime running lights",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Standlicht",
+    "English": "Parking lights / side marker lamp",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Abblendlicht",
+    "English": "Low beam",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Fern Licht",
+    "English": "High beam",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Blinker",
+    "English": "Side indicator",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Warnblinklicht",
+    "English": "Hazard warning light",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Nebelscheinwerfer",
+    "English": "front Fog light",
+    "Action to be done during Exam": "Green Color "
+  },
+  {
+    "German": "Parklicht",
+    "English": "Parking lights",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Rucklicht",
+    "English": "Back lights",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Bremslicht",
+    "English": "braking lights",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Blinker",
+    "English": "Side indicator",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Warnblinklicht",
+    "English": "Hazard warning light",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Nebelschlusslicht",
+    "English": "rear fog lamp",
+    "Action to be done during Exam": "Yellow color indication on the control panel"
+  },
+  {
+    "German": "Ruckfahrlicht",
+    "English": "reverse light",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Kennziechnenbeleuchtung",
+    "English": "number plate light",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Parklicht",
+    "English": "parking lights",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Fernlich an machen sie bitte",
+    "English": "Switch on the high beam please",
+    "Action to be done during Exam": "Push the indicator lever back. \nThe color should turn from green to blue"
+  },
+  {
+    "German": "Wie überprufen Sie den Rücklicht",
+    "English": "How do you check the rear lights",
+    "Action to be done during Exam": "Switch on the low beam or stand licht and then put the vehicle on Reverse to check if the Rücklicht and the number plate light is working"
+  },
+  {
+    "German": "Wie überprufen Sie den Bremslicht",
+    "English": "How do you check the Brake lights",
+    "Action to be done during Exam": "Against the wall or a window while applying the brakes"
+  },
+  {
+    "German": "Wie überprufen Sie den Bremse",
+    "English": "How to check the brakes",
+    "Action to be done during Exam": "Go slowly forward and press the brake pedal. \nWhile standing stationary, press hard on the brake twice and the pedal should come back to ist normal position after release, instead of boing down."
+  },
+  {
+    "German": "Welche farbe hat das Rückfahrlicht",
+    "English": "What color is the reverse lights",
+    "Action to be done during Exam": "Switch on the ignition and engage the reverse gear. Go back and check for the WHITE color light"
+  },
+  {
+    "German": "Heckscheibenheizung",
+    "English": "Rear window heating",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Frontscheibenheizung",
+    "English": "Front windscreen heating",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Was müssen sie im Fahrzeug mitführen",
+    "English": "What do you need to take with you on the vehicle",
+    "Action to be done during Exam": "Notfallmittel \nVerbandskasten- first aid / emergency kit\nWarndrieck - Warning triangle\nWarnweste - Safety west / orange or red or yellow\nDriving papers - registration paper part 1, license"
+  },
+  {
+    "German": "Was müssen sie im Verbandkasten überprüfen",
+    "English": "What do you need to check in the first aid kit",
+    "Action to be done during Exam": "Expiry date (Verfallsdatum) is not crossed, and it is full without missing pieces"
+  },
+  {
+    "German": "Lights",
+    "English": "Main beam/ full beam lights ON",
+    "Action to be done during Exam": "Blue light"
+  },
+  {
+    "German": "Lights",
+    "English": "Rear Fog lamp ON",
+    "Action to be done during Exam": "amber/yellow light"
+  },
+  {
+    "German": "Lights",
+    "English": "towing rope/tow bar must be made identifiable",
+    "Action to be done during Exam": "red flag"
+  },
+  {
+    "German": "Lights",
+    "English": "when vehicle is parked on hard shoulder outside built-up",
+    "Action to be done during Exam": "side-lights to be ON"
+  },
+  {
+    "German": "Lights",
+    "English": "Switch on Fog lamps only when visibility is impaired",
+    "Action to be done during Exam": "fog, rain or snow"
+  },
+  {
+    "German": "Wenden",
+    "English": "To make a u turn",
+    "Action to be done during Exam": ""
+  },
+  {
+    "German": "Gefahrbremsung",
+    "English": "Emergency break",
+    "Action to be done during Exam": ""
+  }
+]
