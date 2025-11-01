@@ -138,6 +138,12 @@
     "Remarks": "Gegenkraft zur Bewegung entlang einer Oberfläche"
   },
   {
+    "German": "der Winkel, -",
+    "English": "angle",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
     "German": "die Haftreibung, -en",
     "English": "static friction",
     "Example": "Die Haftreibung ist größer als die Gleitreibung.\nStatic friction is greater than sliding friction.",
@@ -408,6 +414,24 @@
     "Remarks": ""
   },
   {
+    "German": "das Versagen, -",
+    "English": "",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "das Bauteil, -e",
+    "English": "component",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Pfad, -e",
+    "English": "path",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
     "German": "die Crashbox, -en",
     "English": "crash box",
     "Example": "Die Crashbox schützt den Innenraum.\nThe crash box protects the interior.",
@@ -561,6 +585,12 @@
     "German": "die Vernetzung, -en",
     "English": "mesh",
     "Example": "Die Vernetzung eines komplexen Bauteils erfordert besondere Aufmerksamkeit, um stabile Berechnungsergebnisse zu erhalten.\nThe meshing of a complex component requires special attention to achieve stable calculation results.",
+    "Remarks": ""
+  },
+  {
+    "German": "der Modellaufbau, -ten",
+    "English": "model build up",
+    "Example": "",
     "Remarks": ""
   },
   {
@@ -889,7 +919,7 @@
   },
   {
     "German": "der Kunststoff, -e",
-    "English": "Plastic / Polymer",
+    "English": "Plastic / Polymer / composite",
     "Example": "Kunststoffe sind leicht und günstig.\nPlastics are light and cost-effective.",
     "Remarks": "Thermoplast/Elastomer"
   },
@@ -918,6 +948,30 @@
     "Remarks": "Faser-Kunststoffverbund"
   },
   {
+    "German": "die Faser, -n",
+    "English": "fibre",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Kohlefaser, -n",
+    "English": "carbon fiber",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Glasfaser, -n",
+    "English": "glass fiber",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Faserverbundkunstoff, -e",
+    "English": "fiber composite/reinforced",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
     "German": "der glasfaserverstärkte Kunststoff, -e (GFK)",
     "English": "Glass fiber reinforced plastic (GFRP)",
     "Example": "GFK ist leicht und stabil.\nGFRP is lightweight and strong.",
@@ -927,7 +981,7 @@
     "German": "die Kohlenstofffaser, -n (CFK)",
     "English": "Carbon fiber reinforced plastic (CFRP)",
     "Example": "CFK hat exzellente Festigkeit bei niedrigem Gewicht.\nCFRP has excellent strength at low weight.",
-    "Remarks": "Hochleistungsverbund"
+    "Remarks": "Hochleistungsverbund\nC in DFK is from English Carbon"
   },
   {
     "German": "die Keramik, -en",
@@ -970,6 +1024,42 @@
     "English": "Sealant",
     "Example": "Das Dichtmittel wurde verwendet, um das Leck zu schließen.\nThe sealant was used to close the leak.",
     "Remarks": "Dichtungsmaterial"
+  },
+  {
+    "German": "tragenden Fahrzeugstrukturen",
+    "English": "load bearing vehicle structure",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Monocoque",
+    "English": "Monocoque",
+    "Example": "",
+    "Remarks": "Mono = single; coque = shell --> single shell\n= outer structure that bears all the load\n= BIW + engine mounts + suspension mounts"
+  },
+  {
+    "German": "das Harzsystem, -e",
+    "English": "Resin system",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Zug, ¨-e",
+    "English": "tension",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Druck, -e",
+    "English": "compression",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "",
+    "English": "",
+    "Example": "",
+    "Remarks": ""
   },
   {
     "German": "",

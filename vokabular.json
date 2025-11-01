@@ -466,7 +466,7 @@
     "Word (with Article and Plural)": "anklicken",
     "Part of Speech": "Verb",
     "Meaning": "Click on",
-    "Usage": "Da musst du dieses Wort anklicken.",
+    "Usage": "Da musst du dieses Wort anklicken.\nSie müssen dieses Wort mit der rechten Maustaste anklicken.",
     "Past (Präteritum)": "klickte an",
     "Perfect (Partizip II)": "hat angeklickt",
     "Plusquamperfekt": "hat angeklickt",
@@ -4161,7 +4161,7 @@
     "Level": "A1",
     "Word (with Article and Plural)": "gegen",
     "Part of Speech": "Adverb",
-    "Meaning": "opposite",
+    "Meaning": "opposite / against",
     "Usage": "Fahr nicht gegen den Baum!\nIch bin gegen diese Lösung.\nWer spielt gegen wen? - Bayern gegen Dortmund.\nHaben Sie etwas gegen Grippe?",
     "Past (Präteritum)": "",
     "Perfect (Partizip II)": "",
@@ -8736,20 +8736,6 @@
     "Example statement with the preposition": "Ich spreche in drei Sprachen.\nEr redet mit schöner Sprache."
   },
   {
-    "Level": "A2",
-    "Word (with Article and Plural)": "aussprechen",
-    "Part of Speech": "Verb",
-    "Meaning": "pronounce",
-    "Usage": "Wie spricht man das Wort aus?",
-    "Past (Präteritum)": "sprach aus",
-    "Perfect (Partizip II)": "hat ausgesprochen",
-    "Plusquamperfekt": "hatte ausgesprochen",
-    "Futur I": "wird aussprechen",
-    "Futur II": "wird ausgesprochen haben",
-    "Linked Preposition(s)": "mit, über",
-    "Example statement with the preposition": "Ich spreche mit dir.\nSie spricht über das Problem."
-  },
-  {
     "Level": "A1",
     "Word (with Article and Plural)": "die Stadt, ¨-e",
     "Part of Speech": "Noun",
@@ -10374,6 +10360,34 @@
     "Example statement with the preposition": ""
   },
   {
+    "Level": "A1",
+    "Word (with Article and Plural)": "sprechen",
+    "Part of Speech": "Verb",
+    "Meaning": "speak",
+    "Usage": "Kann ich (mit) Herrn Klein sprechen?",
+    "Past (Präteritum)": "sprach",
+    "Perfect (Partizip II)": "hat gesprochen",
+    "Plusquamperfekt": "hat gesprochen",
+    "Futur I": "wird sprechen",
+    "Futur II": "wird gesprochen haben",
+    "Linked Preposition(s)": "mit, über",
+    "Example statement with the preposition": "Ich spreche mit meinem Lehrer.\nWir sprechen über das Projekt."
+  },
+  {
+    "Level": "A2",
+    "Word (with Article and Plural)": "aussprechen",
+    "Part of Speech": "Verb",
+    "Meaning": "pronounce",
+    "Usage": "Wie spricht man das Wort aus?",
+    "Past (Präteritum)": "sprach aus",
+    "Perfect (Partizip II)": "hat ausgesprochen",
+    "Plusquamperfekt": "hatte ausgesprochen",
+    "Futur I": "wird aussprechen",
+    "Futur II": "wird ausgesprochen haben",
+    "Linked Preposition(s)": "mit, über",
+    "Example statement with the preposition": "Ich spreche mit dir.\nSie spricht über das Problem."
+  },
+  {
     "Level": "A2",
     "Word (with Article and Plural)": "abschließen",
     "Part of Speech": "Verb",
@@ -10904,20 +10918,6 @@
     "Futur II": "",
     "Linked Preposition(s)": "",
     "Example statement with the preposition": ""
-  },
-  {
-    "Level": "A1",
-    "Word (with Article and Plural)": "sprechen",
-    "Part of Speech": "Verb",
-    "Meaning": "speak",
-    "Usage": "Kann ich (mit) Herrn Klein sprechen?",
-    "Past (Präteritum)": "sprach",
-    "Perfect (Partizip II)": "hat gesprochen",
-    "Plusquamperfekt": "hat gesprochen",
-    "Futur I": "wird sprechen",
-    "Futur II": "wird gesprochen haben",
-    "Linked Preposition(s)": "mit, über",
-    "Example statement with the preposition": "Ich spreche mit meinem Lehrer.\nWir sprechen über das Projekt."
   },
   {
     "Level": "A2",
@@ -21334,6 +21334,20 @@
     "Futur II": "",
     "Linked Preposition(s)": "mit, über",
     "Example statement with the preposition": "Wir haben eine Besprechung mit dem Chef.\nDie Besprechung über das Projekt war nötig."
+  },
+  {
+    "Level": "B1",
+    "Word (with Article and Plural)": "nachsprechen",
+    "Part of Speech": "Verb",
+    "Meaning": "repeat after someone",
+    "Usage": "",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
   },
   {
     "Level": "B1",
@@ -36331,6 +36345,20 @@
   },
   {
     "Level": "B1",
+    "Word (with Article and Plural)": "der Spritzer, -",
+    "Part of Speech": "Noun",
+    "Meaning": "sharpener",
+    "Usage": "",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
+  },
+  {
+    "Level": "B1",
     "Word (with Article and Plural)": "der Sport",
     "Part of Speech": "Noun",
     "Meaning": "sport",
@@ -42854,6 +42882,20 @@
     "Example statement with the preposition": "Sie zwingt sich zum Weitermachen."
   },
   {
+    "Level": "B1",
+    "Word (with Article and Plural)": "macht's nicht",
+    "Part of Speech": "Phrase",
+    "Meaning": "never mind",
+    "Usage": "A] Entschuldingung.\nB] Macht's nicht!",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
+  },
+  {
     "Level": "B2",
     "Word (with Article and Plural)": "der Buchhalter / die Buchhalterin",
     "Part of Speech": "Noun",
@@ -42880,5 +42922,75 @@
     "Futur II": "",
     "Linked Preposition(s)": "in, aus, über, für, nach",
     "Example statement with the preposition": "Die Entscheidung steht im Protokoll.\nDie Zahlen stammen aus dem Protokoll der Sitzung.\nWir führen ein Protokoll über das Treffen.\nDas Protokoll ist für alle Teilnehmer bestimmt.\nNach dem Protokoll war er pünktlich da."
+  },
+  {
+    "Level": "B2",
+    "Word (with Article and Plural)": "die Auslegung/Interpretation, -en",
+    "Part of Speech": "Noun",
+    "Meaning": "interpretation",
+    "Usage": "",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
+  },
+  {
+    "Level": "B2",
+    "Word (with Article and Plural)": "auslegen/interpretieren",
+    "Part of Speech": "Verb",
+    "Meaning": "interpret",
+    "Usage": "",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
+  },
+  {
+    "Level": "B2",
+    "Word (with Article and Plural)": "die Einweisung, -en",
+    "Part of Speech": "Noun",
+    "Meaning": "briefing",
+    "Usage": "Eine Einweisung mit ausführlichen Informationen findet vor Ort statt.",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
+  },
+  {
+    "Level": "B2",
+    "Word (with Article and Plural)": "gewähren",
+    "Part of Speech": "Verb",
+    "Meaning": "grant",
+    "Usage": "Der gütige König gewährte seiner Tochter den Wunsch.",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
+  },
+  {
+    "Level": "B2",
+    "Word (with Article and Plural)": "die Gewährung, -en",
+    "Part of Speech": "Noun",
+    "Meaning": "grant",
+    "Usage": "Jetzt habe ich die Gewährung.",
+    "Past (Präteritum)": "",
+    "Perfect (Partizip II)": "",
+    "Plusquamperfekt": "",
+    "Futur I": "",
+    "Futur II": "",
+    "Linked Preposition(s)": "",
+    "Example statement with the preposition": ""
   }
 ]
