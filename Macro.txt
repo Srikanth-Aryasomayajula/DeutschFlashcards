@@ -1,0 +1,83 @@
+Sub Read_Columns_RowWise()
+    Dim rowRange As Range, cell As Range, r As Long
+    Dim cmd As String
+    Dim wsh As Object
+    Set wsh = CreateObject("WScript.Shell")
+    
+    ' Map columns to languages
+    Dim colLang As Object
+    Set colLang = CreateObject("Scripting.Dictionary")
+    
+    ' Columns to be read and their languages
+    colLang.Add "B", "DE"
+    colLang.Add "D", "EN"
+    colLang.Add "E", "DE"
+    colLang.Add "G", "DE"
+    colLang.Add "F", "DE"
+    
+    ' Loop through visible rows only
+    Dim visRows As Range
+    On Error Resume Next
+    Set visRows = Selection.SpecialCells(xlCellTypeVisible)
+    On Error GoTo 0
+    If visRows Is Nothing Then Exit Sub
+    
+    Dim rowAreas As Range
+    For Each rowAreas In visRows.Rows
+        r = rowAreas.row
+        cmd = "powershell -Command ""Add-Type -AssemblyName System.Speech;" & _
+              "$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer;"
+        
+        ' Loop through columns in this visible row in the order of colLang
+        Dim colKey As Variant, text As String
+        For Each colKey In colLang.Keys
+            text = Cells(r, colKey).Value
+            If text <> "" Then
+                ' Replace forward slash
+                If colLang(colKey) = "DE" Then text = Replace(text, "/", "oder")
+                If colLang(colKey) = "EN" Then text = Replace(text, "/", "or")
+                
+                ' Add speech command for this cell
+                If colLang(colKey) = "DE" Then
+                    cmd = cmd & "$speak.SelectVoice('Microsoft Hedda Desktop');" & _
+                                "$speak.Rate = 1;" & _
+                                "$speak.Speak('" & Replace(text, "'", "''") & "');"
+                Else
+                    cmd = cmd & "$speak.SelectVoice('Microsoft Hazel Desktop');" & _
+                                "$speak.Rate = 3;" & _
+                                "$speak.Speak('" & Replace(text, "'", "''") & "');"
+                End If
+            End If
+        Next colKey
+
+        
+        ' Finish PowerShell command and run
+        cmd = cmd & """"
+        wsh.Run cmd, 0, True
+    Next rowAreas
+End Sub
+
+' ----------------------------------------------------------------------------
+' How to use this code to read the columns of any excel row-wise?
+' 1) Open Developer tab (you need to enable it if it does not exist in your excel version: you can google for it) --> Visual Basic --> Right click on the left panel --> New --> Module.
+' 2) Paste this code in the workspace.
+' 3) Change the "colLang.Add" snippet to read whichever columns you want to read and adjust the language.
+' 4) Optionally, the speaking speed can be adjusted using "$speak.Rate" individually for English and German. The range is from -10 to 10.
+' 5) Save the file (the excel needs to be saved in .xlsm format)
+' 6) Select any set of words (could be in just one column, say column A. The code will read all the specified columns for the selected rows)
+' 7) Go to Developer tab --> Macros --> Select this Macro (it will have the same name as the Sub) --> Run
+
+' Note: Make sure Hedda for German and Hazel for English are installed on the PC. If other voices are used for these languages, change the code accordingly.
+
+' Note: To know which voices are installed on your PC, you can use the following script without the single quote in the front for each line and run it.
+
+' Sub ListAllVoices()
+'    Dim Spk As Object
+'    Set Spk = CreateObject("SAPI.SpVoice")
+    
+'    Dim v As Object
+'    For Each v In Spk.GetVoices
+'        Debug.Print v.GetDescription & " | " & v.id
+'    Next v
+' End Sub
+' ----------------------------------------------------------------------------
