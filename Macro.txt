@@ -1,3 +1,137 @@
+Function DropArticle(word As String) As String
+    ' Remove der/die/das from singular
+    Dim lowerWord As String
+    lowerWord = LCase(Left(word, 4))
+    If lowerWord = "der " Or lowerWord = "die " Or lowerWord = "das " Then
+        DropArticle = Mid(word, 5)
+    Else
+        DropArticle = word
+    End If
+End Function
+
+Function AddUmlaut(word As String, vowelPosition As Integer) As String
+    ' Adds umlaut to the vowel at the specified position
+    Dim vowels As String, i As Integer, count As Integer, c As String
+    vowels = "aeiouAEIOU"
+    count = 0
+    AddUmlaut = word
+    For i = 1 To Len(word)
+        c = Mid(word, i, 1)
+        If InStr(1, vowels, c) > 0 Then
+            count = count + 1
+            If count = vowelPosition Then
+                Select Case c
+                    Case "a": Mid(AddUmlaut, i, 1) = "ä"
+                    Case "A": Mid(AddUmlaut, i, 1) = "Ä"
+                    Case "o": Mid(AddUmlaut, i, 1) = "ö"
+                    Case "O": Mid(AddUmlaut, i, 1) = "Ö"
+                    Case "u": Mid(AddUmlaut, i, 1) = "ü"
+                    Case "U": Mid(AddUmlaut, i, 1) = "Ü"
+                End Select
+                Exit For
+            End If
+        End If
+    Next i
+End Function
+
+Function PluralRules(singular As String, ending As String) As String
+    Dim baseWord As String, suffix As String
+
+    baseWord = DropArticle(singular)
+
+    Select Case ending
+        Case "-"
+            PluralRules = baseWord
+
+        Case "-e"
+            PluralRules = baseWord & "e"
+
+        Case "-n"
+            PluralRules = baseWord & "n"
+            
+        Case "-s"
+            PluralRules = baseWord & "s"
+            
+        Case "-en"
+            PluralRules = baseWord & "en"
+
+        Case "-nen"
+            PluralRules = baseWord & "nen"
+
+        Case "¨-e", "¨-er", "¨-"
+            Select Case ending
+                Case "¨-e": suffix = "e"
+                Case "¨-er": suffix = "er"
+                Case "¨-": suffix = ""
+            End Select
+
+            ' Apply your umlaut-position rules
+            If Left(baseWord, 8) = "Betriebs" Or Left(baseWord, 7) = "Briefum" Or _
+               Left(baseWord, 6) = "Notaus" Or Left(baseWord, 6) = "Notauf" Or _
+               Left(baseWord, 7) = "Arbeits" Then
+                baseWord = AddUmlaut(baseWord, 4)
+                
+            ElseIf Left(baseWord, 3) = "Auf" Or Left(baseWord, 3) = "Aus" Or _
+                   Left(baseWord, 3) = "Bei" Or Left(baseWord, 5) = "Brief" Or _
+                   Left(baseWord, 3) = "Ein" Or Left(baseWord, 5) = "Gegen" Or _
+                   Left(baseWord, 5) = "Motor" Or Left(baseWord, 3) = "Ehe" Or _
+                   Left(baseWord, 6) = "Kinder" Or Left(baseWord, 7) = "Basketb" Or _
+                   Left(baseWord, 7) = "Kranken" Then
+                baseWord = AddUmlaut(baseWord, 3)
+                
+            ElseIf Left(baseWord, 2) = "Ab" Or Left(baseWord, 2) = "An" Or _
+                   Left(baseWord, 2) = "Be" Or Left(baseWord, 4) = "Denk" Or _
+                   Left(baseWord, 3) = "Emp" Or Left(baseWord, 2) = "Ge" Or _
+                   Left(baseWord, 3) = "Not" Or Left(baseWord, 4) = "Rats" Or _
+                   Left(baseWord, 5) = "Flugh" Or Left(baseWord, 5) = "Bahnh" Or _
+                   Left(baseWord, 5) = "Fußb" Or Left(baseWord, 5) = "Glück" Or _
+                   Left(baseWord, 4) = "Kühl" Or Left(baseWord, 7) = "Schwimm" Or _
+                   Left(baseWord, 5) = "Sport" Or Left(baseWord, 6) = "Stadtp" Or _
+                   Left(baseWord, 2) = "Um" Or Left(baseWord, 5) = "Fahrp" Or _
+                   Left(baseWord, 7) = "(Fahr)R" Or Left(baseWord, 4) = "Floh" Or _
+                   Left(baseWord, 4) = "Hand" Or Left(baseWord, 5) = "Haupt" Or _
+                   Left(baseWord, 4) = "Kauf" Then
+                baseWord = AddUmlaut(baseWord, 2)
+                
+            Else
+                baseWord = AddUmlaut(baseWord, 1)
+                
+            End If
+
+            PluralRules = baseWord & suffix
+
+        Case Else
+            PluralRules = baseWord & " " & ending
+    End Select
+
+End Function
+
+Function ExpandFourPart(text As String) As String
+    
+    ' Example input: "der Koch, ¨-e / die Köchin, -nen"
+    Dim segments() As String: segments = Split(text, "/")
+    Dim A As String, B As String
+    Dim singular1 As String, end1 As String
+    Dim singular2 As String, end2 As String
+
+    A = Trim(segments(0))
+    B = Trim(segments(1))
+
+    singular1 = Trim(Split(A, ",")(0))
+    ' Remove any line breaks at the start
+    If Left$(singular1, 1) = vbLf Or Left$(singular1, 1) = vbCr Then singular1 = Mid$(singular1, 2)
+    end1 = Trim(Split(A, ",")(1))
+
+    singular2 = Trim(Split(B, ",")(0))
+    ' Remove any line breaks at the start
+    If Left$(singular2, 1) = vbLf Or Left$(singular2, 1) = vbCr Then singular2 = Mid$(singular2, 2)
+    end2 = Trim(Split(B, ",")(1))
+
+    ExpandFourPart = singular1 & ", die " & PluralRules(singular1, end1) & _
+                    ". oder " & singular2 & ", die " & PluralRules(singular2, end2)
+    
+End Function
+
 Sub Read_Columns_RowWise()
     Dim rowRange As Range, cell As Range, r As Long
     Dim cmd As String
@@ -12,8 +146,8 @@ Sub Read_Columns_RowWise()
     colLang.Add "B", "DE"
     colLang.Add "D", "EN"
     colLang.Add "E", "DE"
-    colLang.Add "G", "DE"
-    colLang.Add "F", "DE"
+    ' colLang.Add "G", "DE"
+    ' colLang.Add "F", "DE"
     
     ' Loop through visible rows only
     Dim visRows As Range
@@ -24,18 +158,53 @@ Sub Read_Columns_RowWise()
     
     Dim rowAreas As Range
     For Each rowAreas In visRows.Rows
-        r = rowAreas.row
+        r = rowAreas.Row
         cmd = "powershell -Command ""Add-Type -AssemblyName System.Speech;" & _
               "$speak = New-Object System.Speech.Synthesis.SpeechSynthesizer;"
         
         ' Loop through columns in this visible row in the order of colLang
         Dim colKey As Variant, text As String
+        
         For Each colKey In colLang.Keys
             text = Cells(r, colKey).Value
+            
+            Dim isFirstCell As Boolean: isFirstCell = (colKey = "B")
+            
             If text <> "" Then
-                ' Replace forward slash
-                If colLang(colKey) = "DE" Then text = Replace(text, "/", "oder")
-                If colLang(colKey) = "EN" Then text = Replace(text, "/", "or")
+                
+                ' Replace texts with the right words
+                If colLang(colKey) = "DE" Then
+                
+                    If isFirstCell Then
+
+                        ' Special case: both comma and slash ? 4-part word
+                        If InStr(text, ",") > 0 And InStr(text, "/") > 0 Then
+                            text = ExpandFourPart(text)
+                            GoTo SkipNormalPlural
+                        End If
+                    
+                        text = Replace(text, "/", ". oder")
+                        text = Replace(text, "(Pl.)", ". nur Plural")
+                        text = Replace(text, "(Sg.)", ". nur Singular")
+                    
+                        Dim parts() As String, singular As String, ending As String, plural As String
+                        parts = Split(text, ",")
+                        singular = Trim(parts(0))
+                    
+                        If UBound(parts) > 0 Then
+                            ending = Trim(parts(1))
+                            plural = "die " & PluralRules(singular, ending)
+                            text = singular & ", " & plural
+                        End If
+                        
+                    End If
+                
+                End If
+                
+SkipNormalPlural:
+
+                If colLang(colKey) = "DE" Then text = Replace(text, "/", ". oder")
+                If colLang(colKey) = "EN" Then text = Replace(text, "/", ". or")
                 
                 ' Add speech command for this cell
                 If colLang(colKey) = "DE" Then
@@ -44,7 +213,7 @@ Sub Read_Columns_RowWise()
                                 "$speak.Speak('" & Replace(text, "'", "''") & "');"
                 Else
                     cmd = cmd & "$speak.SelectVoice('Microsoft Hazel Desktop');" & _
-                                "$speak.Rate = 3;" & _
+                                "$speak.Rate = 1;" & _
                                 "$speak.Speak('" & Replace(text, "'", "''") & "');"
                 End If
             End If
@@ -59,7 +228,7 @@ End Sub
 
 ' ----------------------------------------------------------------------------
 ' How to use this code to read the columns of any excel row-wise?
-' 1) Open Developer tab (you need to enable it if it does not exist in your excel version: you can google for it) --> Visual Basic --> Right click on the left panel --> New --> Module.
+' 1) Open Developer tab (you need to enable it if it does not exist in your excel version: you can google for it) --> Visual Basic --> Right click on the left panel --> Insert --> Module.
 ' 2) Paste this code in the workspace.
 ' 3) Change the "colLang.Add" snippet to read whichever columns you want to read and adjust the language.
 ' 4) Optionally, the speaking speed can be adjusted using "$speak.Rate" individually for English and German. The range is from -10 to 10.
