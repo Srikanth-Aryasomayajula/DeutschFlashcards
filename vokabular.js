@@ -63,7 +63,10 @@ document.addEventListener("DOMContentLoaded", () => {
 	    });
 	});
 
-		
+	// Default: Select all Levels
+	checkboxes.forEach(cb => cb.checked = true);
+	selectedLevels = updateSelection(checkboxes, dropdownHeader);
+	
 	// Parts of speech checkboxes
 	posCheckboxes.forEach(cb => {
 		cb.addEventListener("change", () => {
@@ -73,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			
 		});
 	});
-
+	
 	// Display the table/flashcards when the button is clicked
 	displayTableBtn.addEventListener("click", () => {
 		clearSelection();
@@ -177,24 +180,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 	    return filteredData;
 	}
-	
-	// POS checkbox handling
-	// function updatePOSSelection() {
-	// 	selectedPOS = Array.from(posCheckboxes)
-	// 		.filter(cb => cb.checked)
-	// 		.map(cb => cb.value);
-	// 
-	// 	if (selectedPOS.length === 0 || selectedPOS.length === posCheckboxes.length) {
-	// 	//	posDropdownHeader.textContent = "Select Part of Speech(s)";
-	// 	//} else if (selectedPOS.length === posCheckboxes.length) {
-	// 		posDropdownHeader.textContent = "All";
-	// 		posCheckboxes.forEach(cb => cb.checked = true);
-	// 	    selectedPOS = Array.from(posCheckboxes).map(cb => cb.value);
-	// 		
-	// 	} else {
-	// 		posDropdownHeader.textContent = selectedPOS.join(", ");
-	// 	}
-	// }
 
   	// Fetch and parse JSON from pre-converted file
 	function fetchExcelData() {
@@ -225,6 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				        selectedPOS = updateSelection(posCheckboxes, posDropdownHeader);
 				    });
 				});
+
+				// Default: Select all POS
+				posCheckboxes.forEach(cb => cb.checked = true);
+				selectedPOS = updateSelection(posCheckboxes, posDropdownHeader);
 
 				window.vocabData = allData;
 				renderTable(allData);
@@ -473,8 +462,3 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
-
-
-
-
-
