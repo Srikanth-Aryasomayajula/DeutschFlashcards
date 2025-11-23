@@ -48,29 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			posDropdownOptions.classList.add("hidden");
 		}
 	});
-	
-	posCheckboxes.forEach(checkbox => {
-		checkbox.addEventListener("change", () => {
-			const isAllBoxClicked = checkbox.value === "all";
-			const allCheckboxesExceptAll = Array.from(posCheckboxes).slice(1);
-	
-			if (isAllBoxClicked) {
-				const allChecked = allCheckboxesExceptAll.every(cb => cb.checked);
-				if (allChecked) {
-					// All already checked → uncheck all
-					posCheckboxes.forEach(cb => cb.checked = false);
-				} else {
-					// Otherwise → check all
-					posCheckboxes.forEach(cb => cb.checked = true);
-				}
-			} else {
-				if (!checkbox.checked && posCheckboxes[0].checked) posCheckboxes[0].checked = false;
-				if (allCheckboxesExceptAll.every(cb => cb.checked)) posCheckboxes[0].checked = true;
-			}
-	
-			updatePOSSelection();
-		});
-	});
 
 	// Handle checkbox change for level selection
 	let selectedLevels = [];
@@ -101,6 +78,29 @@ document.addEventListener("DOMContentLoaded", () => {
 				checkboxes[0].checked = allSelected;
 			}
 		}
+		
+		posCheckboxes.forEach(checkbox => {
+			checkbox.addEventListener("change", () => {
+				const isAllBoxClicked = checkbox.value === "all";
+				const allCheckboxesExceptAll = Array.from(posCheckboxes).slice(1);
+		
+				if (isAllBoxClicked) {
+					const allChecked = allCheckboxesExceptAll.every(cb => cb.checked);
+					if (allChecked) {
+						// All already checked → uncheck all
+						posCheckboxes.forEach(cb => cb.checked = false);
+					} else {
+						// Otherwise → check all
+						posCheckboxes.forEach(cb => cb.checked = true);
+					}
+				} else {
+					if (!checkbox.checked && posCheckboxes[0].checked) posCheckboxes[0].checked = false;
+					if (allCheckboxesExceptAll.every(cb => cb.checked)) posCheckboxes[0].checked = true;
+				}
+		
+				updatePOSSelection();
+			});
+		});
 		  
 		// Now collect selected levels and render table
 		selectedLevels = Array.from(checkboxes)
@@ -134,10 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		// Filter data and render table
 	    const filteredData = allData.filter(row => {
 	      const levelMatch = selectedLevels.includes((row["Level"] || "").trim());
-	      const posMatch =
-	        selectedPOS.length === 0 ||
-	        selectedPOS.includes("all") ||
-	        selectedPOS.includes((row["Part of Speech"] || "").trim());
+	      const posMatch = selectedPOS.includes((row["Part of Speech"] || "").trim());
 	      return levelMatch && posMatch;
 	    });
 	
@@ -154,12 +151,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			return;
 		}
 		
+		if (selectedPOS.length === 0) {
+			alert("Please select the part of speech");
+			return;
+		}
+		
 		const filteredData = allData.filter(row => {
 			const levelMatch = selectedLevels.includes((row["Level"] || "").trim());
-			const posMatch =
-				selectedPOS.length === 0 ||
-				selectedPOS.includes("all") ||
-				selectedPOS.includes((row["Part of Speech"] || "").trim());
+			const posMatch = selectedPOS.includes((row["Part of Speech"] || "").trim());
 			return levelMatch && posMatch;
 		});
 		
@@ -483,9 +482,3 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
-
-
-
-
-
-
