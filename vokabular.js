@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Display the table/flashcards when the button is clicked
 	displayTableBtn.addEventListener("click", () => {
-		clearSelection();
+		/ clearSelection();
 		
 		if (selectedLevels.length === 0) {
 			alert("Please select the level");
@@ -495,5 +495,6 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
