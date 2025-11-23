@@ -151,19 +151,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function updateSelection(checkboxes, headerElement) {
-	    let selected = Array.from(checkboxes)
+	    const selected = Array.from(checkboxes)
 	        .filter(cb => cb.checked)
 	        .map(cb => cb.value);
 	
-	    // If nothing selected → auto-select ALL
-	    if (selected.length === 0) {
-	        checkboxes.forEach(cb => cb.checked = true);
-	        selected = Array.from(checkboxes).map(cb => cb.value);
-	    }
-	
-	    // Update header
 	    if (selected.length === checkboxes.length) {
 	        headerElement.textContent = "All";
+	    } else if (selected.length === 0) {
+	        headerElement.textContent = "None";
 	    } else {
 	        headerElement.textContent = selected.join(", ");
 	    }
@@ -470,5 +465,6 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
