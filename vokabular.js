@@ -25,16 +25,22 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Call this function to load the excel data
 	fetchExcelData();
 
-	// Toggle dropdown visibility
+	// Toggle Levels dropdown
 	dropdownHeader.addEventListener("click", (e) => {
 		e.stopPropagation(); // prevent document click from closing it immediately
 		dropdownOptions.classList.toggle("hidden");
+
+		// Close the POS dropdown if open
+		posDropdownOptions.classList.add("hidden");
 	});
 
 	// Toggle POS dropdown
 	posDropdownHeader.addEventListener("click", (e) => {
 		e.stopPropagation();
 		posDropdownOptions.classList.toggle("hidden");
+
+		// Close the Levels dropdown if open
+	    dropdownOptions.classList.add("hidden");
 	});
 
 	// Close the dropdowns if clicked outside
@@ -81,13 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	displayTableBtn.addEventListener("click", () => {
 		clearSelection();
 		
-		// if (selectedLevels.length === 0) {
-		// 	alert("Please select the level");
-		// 	return;
-		// }
-		
 		filteredData = applyFilters();
-		//renderTable(filteredData)
 		
 		if (tableViewRadio.checked) {
 			table.style.display = "none"; //'block' --> table is shown; 'none' --> table is hidden
