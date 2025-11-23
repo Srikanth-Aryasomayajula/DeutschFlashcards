@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					if (allCheckboxesExceptAll.every(cb => cb.checked)) posCheckboxes[0].checked = true;
 				}
 		
-				updatePOSSelection();
+				// updatePOSSelection();
 			});
 		});
 		  
@@ -496,6 +496,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
