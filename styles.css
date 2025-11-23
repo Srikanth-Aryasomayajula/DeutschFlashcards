@@ -347,6 +347,12 @@ body {
   background-color: #fff;
 }
 
+#posSelect {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  padding: 8px 12px;
+}
+
 .custom-dropdown {
   position: relative;
   width: 250px;
