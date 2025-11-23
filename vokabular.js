@@ -52,7 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Handle checkbox change for level selection
 	let selectedLevels = [];
 	let selectedPOS = [];
-	
+
+	// Levels checkboxes
 	checkboxes.forEach(checkbox => {
 	  checkbox.addEventListener("change", () => {
 		const isAllBoxClicked = checkbox.value === "all";
@@ -78,7 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				checkboxes[0].checked = allSelected;
 			}
 		}
-		
+		  
+		// Now collect selected levels and render table
+		selectedLevels = Array.from(checkboxes)
+			.filter(cb => cb.checked)
+			.map(cb => cb.value);
+
+		// Parts of speech checkboxes
 		posCheckboxes.forEach(checkbox => {
 			checkbox.addEventListener("change", () => {
 				const isAllBoxClicked = checkbox.value === "all";
@@ -102,11 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		});
 		  
-		// Now collect selected levels and render table
-		selectedLevels = Array.from(checkboxes)
-			.filter(cb => cb.checked)
-			.map(cb => cb.value);
-
 		// Collect selected POS
 	    selectedPOS = Array.from(posCheckboxes)
 	      .filter(cb => cb.checked)
@@ -493,4 +495,5 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
