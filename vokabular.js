@@ -151,10 +151,10 @@ document.addEventListener("DOMContentLoaded", () => {
 			return;
 		}
 		
-		if (selectedPOS.length === 0) {
-			alert("Please select the part of speech");
-			return;
-		}
+		// if (selectedPOS.length === 0) {
+			// alert("Please select the part of speech");
+			// return;
+		// }
 		
 		const filteredData = allData.filter(row => {
 			const levelMatch = selectedLevels.includes((row["Level"] || "").trim());
@@ -490,6 +490,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
