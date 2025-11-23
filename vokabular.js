@@ -96,9 +96,16 @@ document.addEventListener("DOMContentLoaded", () => {
 						posCheckboxes.forEach(cb => cb.checked = true);
 					}
 				} else {
-					if (!checkbox.checked && posCheckboxes[0].checked) posCheckboxes[0].checked = false;
-					if (allCheckboxesExceptAll.every(cb => cb.checked)) posCheckboxes[0].checked = true;
+				// Any individual checkbox is clicked
+				if (!checkbox.checked && posCheckboxes[0].checked) {
+					// If a level is unchecked and 'all' is checked → uncheck 'all'
+					posCheckboxes[0].checked = false;
+				} else {
+					// If all others are now checked → check 'all' automatically
+					const allSelected = allCheckboxesExceptAll.every(cb => cb.checked);
+					posCheckboxes[0].checked = allSelected;
 				}
+			}
 		
 				// updatePOSSelection();
 			});
@@ -496,6 +503,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
