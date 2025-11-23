@@ -31,6 +31,14 @@
           <label><input type="checkbox" value="C2" /> C2</label>
         </div>
       </div>
+
+      <div class="custom-dropdown" id="posSelect">
+        <div class="dropdown-header" id="posDropdownHeader">Select Part of Speech(s)</div>
+        <div class="dropdown-options hidden" id="posDropdownOptions">
+          <label><input type="checkbox" value="all" /> All</label>
+          <!-- POS options will be populated dynamically from JSON -->
+        </div>
+      </div>
       
       <button id="displayTableBtn">Display</button>
       <button id="clearSelection">Clear Selection</button>
@@ -70,3 +78,4 @@
   <div id="footer-placeholder"></div>
 </body>
 </html>
+
