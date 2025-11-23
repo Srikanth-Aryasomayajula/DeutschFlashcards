@@ -48,43 +48,47 @@ document.addEventListener("DOMContentLoaded", () => {
 	  posDropdownOptions.classList.toggle("hidden");
 	});
 	
-
-	
-	// POS checkbox handling (similar to level logic)
+	// POS checkbox handling
 	function updatePOSSelection() {
-	  selectedPOS = Array.from(posCheckboxes)
-	    .filter(cb => cb.checked)
-	    .map(cb => cb.value);
+		selectedPOS = Array.from(posCheckboxes)
+			.filter(cb => cb.checked)
+			.map(cb => cb.value);
 	
-	  if (selectedPOS.length === 0) {
-	    posDropdownHeader.textContent = "Select Part of Speech(s)";
-	  } else if (selectedPOS.includes("all")) {
-	    posDropdownHeader.textContent = "All";
-	  } else {
-	    posDropdownHeader.textContent = selectedPOS.join(", ");
-	  }
+		if (selectedPOS.length === 0) {
+			posDropdownHeader.textContent = "Select Part of Speech(s)";
+		} else if (selectedPOS.length === posCheckboxes.length) {
+			posDropdownHeader.textContent = "All";
+		} else {
+			posDropdownHeader.textContent = selectedPOS.join(", ");
+		}
 	}
 	
-	posCheckboxes.forEach(cb => {
-	  cb.addEventListener("change", () => {
-	    const isAll = cb.value === "all";
-	    const allExceptAll = Array.from(posCheckboxes).slice(1);
+	posCheckboxes.forEach(checkbox => {
+		checkbox.addEventListener("change", () => {
+			const isAllBoxClicked = checkbox.value === "all";
+			const allCheckboxesExceptAll = Array.from(posCheckboxes).slice(1);
 	
-	    if (isAll) {
-	      const allChecked = allExceptAll.every(c => c.checked);
-	      posCheckboxes.forEach(c => c.checked = !allChecked);
-	    } else {
-	      if (!cb.checked && posCheckboxes[0].checked) posCheckboxes[0].checked = false;
-	      if (allExceptAll.every(c => c.checked)) posCheckboxes[0].checked = true;
-	    }
+			if (isAllBoxClicked) {
+				const allChecked = allCheckboxesExceptAll.every(cb => cb.checked);
+				if (allChecked) {
+					// All already checked → uncheck all
+					posCheckboxes.forEach(cb => cb.checked = false);
+				} else {
+					// Otherwise → check all
+					posCheckboxes.forEach(cb => cb.checked = true);
+				}
+			} else {
+				if (!checkbox.checked && posCheckboxes[0].checked) posCheckboxes[0].checked = false;
+				if (allCheckboxesExceptAll.every(cb => cb.checked)) posCheckboxes[0].checked = true;
+			}
 	
-	    updatePOSSelection();
-	  });
+			updatePOSSelection();
+		});
 	});
-
 
 	// Handle checkbox change for level selection
 	let selectedLevels = [];
+	let selectedPOS = [];
 	
 	checkboxes.forEach(checkbox => {
 	  checkbox.addEventListener("change", () => {
@@ -144,9 +148,14 @@ document.addEventListener("DOMContentLoaded", () => {
 			return;
 		}
 		
-		const filteredData = allData.filter(row =>
-			selectedLevels.includes((row["Level"] || "").trim())
-		);
+		const filteredData = allData.filter(row => {
+			const levelMatch = selectedLevels.includes((row["Level"] || "").trim());
+			const posMatch =
+				selectedPOS.length === 0 ||
+				selectedPOS.includes("all") ||
+				selectedPOS.includes((row["Part of Speech"] || "").trim());
+			return levelMatch && posMatch;
+		});
 		
 		if (tableViewRadio.checked) {
 			table.style.display = "none"; //'block' --> table is shown; 'none' --> table is hidden
@@ -160,9 +169,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else if (flashcardViewRadio.checked) {
 			table.style.display = "none";
 			flashcardContainer.style.display = "block";
-			renderFlashcards(
-				allData.filter(row => selectedLevels.includes((row["Level"] || "").trim()))
-			);
+			// renderFlashcards(
+				// allData.filter(row => selectedLevels.includes((row["Level"] || "").trim()))
+			// );
+			renderFlashcards(filteredData);
 		}
 	});
 
@@ -453,5 +463,6 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
