@@ -114,11 +114,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	      .filter(cb => cb.checked)
 	      .map(cb => cb.value);
 
-		if (selectedPOS.length === 0) {
-		    posCheckboxes.forEach(cb => cb.checked = true);
-		    selectedPOS = Array.from(posCheckboxes).map(cb => cb.value);
-		}
-
 		if (selectedLevels.length === 0) {
 			dropdownHeader.textContent = "Select Level(s)";
 			renderTable([]);
@@ -223,6 +218,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		//	posDropdownHeader.textContent = "Select Part of Speech(s)";
 		//} else if (selectedPOS.length === posCheckboxes.length) {
 			posDropdownHeader.textContent = "All";
+			posCheckboxes.forEach(cb => cb.checked = true);
+		    selectedPOS = Array.from(posCheckboxes).map(cb => cb.value);
+			
 		} else {
 			posDropdownHeader.textContent = selectedPOS.join(", ");
 		}
@@ -498,6 +496,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
