@@ -91,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Handle checkbox change for level selection
 	let selectedLevels = [];
-	let selectedPOS = [];
 	
 	checkboxes.forEach(checkbox => {
 	  checkbox.addEventListener("change", () => {
@@ -466,6 +465,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
