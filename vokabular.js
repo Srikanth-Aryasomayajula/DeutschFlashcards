@@ -80,6 +80,21 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		}
 
+		// Now collect selected levels and render table
+		selectedLevels = Array.from(checkboxes)
+			.filter(cb => cb.checked)
+			.map(cb => cb.value);
+
+		if (selectedLevels.length === 0) {
+			dropdownHeader.textContent = "Select Level(s)";
+			renderTable([]);
+		} else if (selectedLevels.length === checkboxes.length) {
+			dropdownHeader.textContent = "All";
+			renderTable(allData);
+		} else {
+			dropdownHeader.textContent = selectedLevels.join(", ");
+		}
+		
 		// Parts of speech checkboxes
 		posCheckboxes.forEach(checkbox => {
 			checkbox.addEventListener("change", () => {
@@ -110,26 +125,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				// updatePOSSelection();
 			});
 		});
-		  
-		// Now collect selected levels and render table
-		selectedLevels = Array.from(checkboxes)
-			.filter(cb => cb.checked)
-			.map(cb => cb.value);
-		  
+
 		// Collect selected POS
 	    selectedPOS = Array.from(posCheckboxes)
 	      .filter(cb => cb.checked)
 	      .map(cb => cb.value);
-
-		if (selectedLevels.length === 0) {
-			dropdownHeader.textContent = "Select Level(s)";
-			renderTable([]);
-		} else if (selectedLevels.length === checkboxes.length) {
-			dropdownHeader.textContent = "All";
-			renderTable(allData);
-		} else {
-			dropdownHeader.textContent = selectedLevels.join(", ");
-		}
 
 		// Update dropdown header for POS
 		if (selectedPOS.length === 0 || selectedPOS.length === posCheckboxes.length) {
@@ -503,6 +503,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
