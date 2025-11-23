@@ -144,7 +144,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Display the table/flashcards when the button is clicked
 	displayTableBtn.addEventListener("click", () => {
-		//clearSelection();
+		clearSelection();
 		
 		if (selectedLevels.length === 0) {
 			alert("Please select the level");
@@ -175,7 +175,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			table.style.display = "none";
 			flashcardContainer.style.display = "block";
 			renderFlashcards(
-				allData.filter(row => selectedLevels.includes((row["Level"] || "").trim()))
+				//allData.filter(row => selectedLevels.includes((row["Level"] || "").trim()))
+				filteredData
 			);
 			//renderFlashcards(filteredData);
 		}
@@ -482,4 +483,5 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
