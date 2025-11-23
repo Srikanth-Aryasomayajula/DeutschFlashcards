@@ -211,9 +211,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			.filter(cb => cb.checked)
 			.map(cb => cb.value);
 	
-		if (selectedPOS.length === 0) {
-			posDropdownHeader.textContent = "Select Part of Speech(s)";
-		} else if (selectedPOS.length === posCheckboxes.length) {
+		if (selectedPOS.length === 0 or selectedPOS.length === posCheckboxes.length) {
+		//	posDropdownHeader.textContent = "Select Part of Speech(s)";
+		//} else if (selectedPOS.length === posCheckboxes.length) {
 			posDropdownHeader.textContent = "All";
 		} else {
 			posDropdownHeader.textContent = selectedPOS.join(", ");
@@ -490,6 +490,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
