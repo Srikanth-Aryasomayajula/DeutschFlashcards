@@ -189,6 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Function to clear selection
 	function clearSelection() {
 		checkboxes.forEach(cb => cb.checked = false);
+		posCheckboxes.forEach(cb => cb.checked = false);
 		tableBody.innerHTML = "";  // Clear the table body
 		const table = document.getElementById("vocabTable");
 		table.style.display = "none";  // Hide the table
@@ -488,6 +489,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
