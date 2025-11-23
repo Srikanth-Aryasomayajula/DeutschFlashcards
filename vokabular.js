@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const posDropdownHeader = document.getElementById("posDropdownHeader");
 	const posDropdownOptions = document.getElementById("posDropdownOptions");
-	const posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
+	let posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
 
 	const clearBtn = document.getElementById("clearSelection");
 	const displayTableBtn = document.getElementById("displayTableBtn");
@@ -218,6 +218,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				const posOptionsHTML = uniquePOS.map(pos => `<label><input type="checkbox" value="${pos}" /> ${pos}</label>`).join("");
 				posDropdownOptions.innerHTML += posOptionsHTML;
 				posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
+
+				posCheckboxes.forEach(cb => {
+				    cb.addEventListener("change", () => {
+				        handleCheckboxClick(posCheckboxes, cb);
+				        selectedPOS = updateSelection(posCheckboxes, posDropdownHeader);
+				    });
+				});
 
 				window.vocabData = allData;
 				renderTable(allData);
@@ -466,6 +473,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
