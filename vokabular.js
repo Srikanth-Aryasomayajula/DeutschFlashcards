@@ -10,6 +10,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const checkboxes = dropdownOptions.querySelectorAll("input[type='checkbox']");
 
+	const posDropdownHeader = document.getElementById("posDropdownHeader");
+	const posDropdownOptions = document.getElementById("posDropdownOptions");
+	let posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
+	let selectedPOS = [];
+
 	const clearBtn = document.getElementById("clearSelection");
 	const displayTableBtn = document.getElementById("displayTableBtn");
 	const SHEET_NAME = "vokabular";
@@ -31,6 +36,51 @@ document.addEventListener("DOMContentLoaded", () => {
 		  dropdownOptions.classList.add("hidden");
 		}
 	});
+
+	// Toggle POS dropdown
+	posDropdownHeader.addEventListener("click", () => {
+	  posDropdownOptions.classList.toggle("hidden");
+	});
+	
+	// Close POS dropdown on outside click
+	document.addEventListener("click", (e) => {
+	  if (!posDropdownHeader.contains(e.target) && !posDropdownOptions.contains(e.target)) {
+	    posDropdownOptions.classList.add("hidden");
+	  }
+	});
+	
+	// POS checkbox handling (similar to level logic)
+	function updatePOSSelection() {
+	  selectedPOS = Array.from(posCheckboxes)
+	    .filter(cb => cb.checked)
+	    .map(cb => cb.value);
+	
+	  if (selectedPOS.length === 0) {
+	    posDropdownHeader.textContent = "Select Part of Speech(s)";
+	  } else if (selectedPOS.includes("all")) {
+	    posDropdownHeader.textContent = "All";
+	  } else {
+	    posDropdownHeader.textContent = selectedPOS.join(", ");
+	  }
+	}
+	
+	posCheckboxes.forEach(cb => {
+	  cb.addEventListener("change", () => {
+	    const isAll = cb.value === "all";
+	    const allExceptAll = Array.from(posCheckboxes).slice(1);
+	
+	    if (isAll) {
+	      const allChecked = allExceptAll.every(c => c.checked);
+	      posCheckboxes.forEach(c => c.checked = !allChecked);
+	    } else {
+	      if (!cb.checked && posCheckboxes[0].checked) posCheckboxes[0].checked = false;
+	      if (allExceptAll.every(c => c.checked)) posCheckboxes[0].checked = true;
+	    }
+	
+	    updatePOSSelection();
+	  });
+	});
+
 
 	// Handle checkbox change for level selection
 	let selectedLevels = [];
@@ -74,9 +124,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			renderTable(allData);
 		} else {
 			dropdownHeader.textContent = selectedLevels.join(", ");
-			const filteredData = allData.filter(row =>
-				selectedLevels.includes((row["Level"] || "").trim())
-			);
+			const filteredData = allData.filter(row => {
+			  const levelMatch = selectedLevels.includes((row["Level"] || "").trim());
+			  const posMatch = selectedPOS.length === 0 || selectedPOS.includes("all") || selectedPOS.includes((row["Part of Speech"] || "").trim());
+			  return levelMatch && posMatch;
+			});
 			renderTable(filteredData);
 		}
 	  });
@@ -146,6 +198,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			})
 			.then(data => {
 				allData = data;
+
+				// Populate unique Part of Speech options
+				const uniquePOS = Array.from(new Set(allData.map(r => (r["Part of Speech"] || "").trim()))).sort();
+				const posOptionsHTML = uniquePOS.map(pos => `<label><input type="checkbox" value="${pos}" /> ${pos}</label>`).join("");
+				posDropdownOptions.innerHTML += posOptionsHTML;
+				posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
+
 				window.vocabData = allData;
 				renderTable(allData);
 			})
@@ -393,3 +452,4 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
