@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const posDropdownHeader = document.getElementById("posDropdownHeader");
 	const posDropdownOptions = document.getElementById("posDropdownOptions");
 	let posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
-	let selectedPOS = [];
 
 	const clearBtn = document.getElementById("clearSelection");
 	const displayTableBtn = document.getElementById("displayTableBtn");
@@ -50,22 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	});
 	
-	
-	// POS checkbox handling
-	function updatePOSSelection() {
-		selectedPOS = Array.from(posCheckboxes)
-			.filter(cb => cb.checked)
-			.map(cb => cb.value);
-	
-		if (selectedPOS.length === 0) {
-			posDropdownHeader.textContent = "Select Part of Speech(s)";
-		} else if (selectedPOS.length === posCheckboxes.length) {
-			posDropdownHeader.textContent = "All";
-		} else {
-			posDropdownHeader.textContent = selectedPOS.join(", ");
-		}
-	}
-	
 	posCheckboxes.forEach(checkbox => {
 		checkbox.addEventListener("change", () => {
 			const isAllBoxClicked = checkbox.value === "all";
@@ -91,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Handle checkbox change for level selection
 	let selectedLevels = [];
+	let selectedPOS = [];
 	
 	checkboxes.forEach(checkbox => {
 	  checkbox.addEventListener("change", () => {
@@ -117,11 +101,16 @@ document.addEventListener("DOMContentLoaded", () => {
 				checkboxes[0].checked = allSelected;
 			}
 		}
-
+		  
 		// Now collect selected levels and render table
 		selectedLevels = Array.from(checkboxes)
 			.filter(cb => cb.checked)
 			.map(cb => cb.value);
+
+		// Collect selected POS
+	    selectedPOS = Array.from(posCheckboxes)
+	      .filter(cb => cb.checked)
+	      .map(cb => cb.value);
 
 		if (selectedLevels.length === 0) {
 			dropdownHeader.textContent = "Select Level(s)";
@@ -131,13 +120,28 @@ document.addEventListener("DOMContentLoaded", () => {
 			renderTable(allData);
 		} else {
 			dropdownHeader.textContent = selectedLevels.join(", ");
-			const filteredData = allData.filter(row => {
-			  const levelMatch = selectedLevels.includes((row["Level"] || "").trim());
-			  const posMatch = selectedPOS.length === 0 || selectedPOS.includes("all") || selectedPOS.includes((row["Part of Speech"] || "").trim());
-			  return levelMatch && posMatch;
-			});
-			renderTable(filteredData);
 		}
+
+		// Update dropdown header for POS
+		if (selectedPOS.length === 0) {
+		  posDropdownHeader.textContent = "Select Part(s) of Speech";
+		} else if (selectedPOS.length === posCheckboxes.length) {
+		  posDropdownHeader.textContent = "All";
+		} else {
+		  posDropdownHeader.textContent = selectedPOS.join(", ");
+		}
+
+		// Filter data and render table
+	    const filteredData = allData.filter(row => {
+	      const levelMatch = selectedLevels.includes((row["Level"] || "").trim());
+	      const posMatch =
+	        selectedPOS.length === 0 ||
+	        selectedPOS.includes("all") ||
+	        selectedPOS.includes((row["Part of Speech"] || "").trim());
+	      return levelMatch && posMatch;
+	    });
+	
+	    renderTable(filteredData);
 	  });
 	});
 
@@ -171,10 +175,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else if (flashcardViewRadio.checked) {
 			table.style.display = "none";
 			flashcardContainer.style.display = "block";
-			// renderFlashcards(
-				// allData.filter(row => selectedLevels.includes((row["Level"] || "").trim()))
-			// );
-			renderFlashcards(filteredData);
+			renderFlashcards(
+				allData.filter(row => selectedLevels.includes((row["Level"] || "").trim()))
+			);
+			//renderFlashcards(filteredData);
 		}
 	});
 
@@ -200,7 +204,21 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 		
 	}
+
+	// POS checkbox handling
+	function updatePOSSelection() {
+		selectedPOS = Array.from(posCheckboxes)
+			.filter(cb => cb.checked)
+			.map(cb => cb.value);
 	
+		if (selectedPOS.length === 0) {
+			posDropdownHeader.textContent = "Select Part of Speech(s)";
+		} else if (selectedPOS.length === posCheckboxes.length) {
+			posDropdownHeader.textContent = "All";
+		} else {
+			posDropdownHeader.textContent = selectedPOS.join(", ");
+		}
+	}
 
   	// Fetch and parse JSON from pre-converted file
 	function fetchExcelData() {
@@ -465,6 +483,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
