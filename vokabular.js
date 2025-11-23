@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		// }
 		
 		filteredData = applyFilters();
+		//renderTable(filteredData)
 		
 		if (tableViewRadio.checked) {
 			table.style.display = "none"; //'block' --> table is shown; 'none' --> table is hidden
@@ -178,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	        return levelMatch && posMatch;
 	    });
 	
-	    renderTable(filteredData);
+	    return filteredData;
 	}
 	
 	// POS checkbox handling
@@ -469,4 +470,5 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
