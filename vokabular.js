@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	// Display the table/flashcards when the button is clicked
 	displayTableBtn.addEventListener("click", () => {
-		// clearSelection();
+		clearSelection();
 		
 		if (selectedLevels.length === 0) {
 			alert("Please select the level");
@@ -184,15 +184,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Clear selection
 	clearBtn.addEventListener("click", () => {
 		clearSelection();
+		selectedLevels = [];
+	    selectedPOS = [];
 		dropdownHeader.textContent = "Select Level(s)";
 		posDropdownHeader.textContent = "Select Part(s) of Speech";
 	});
 
 	// Function to clear selection
 	function clearSelection() {
-		selectedLevels = [];
-	    selectedPOS = [];
-		
+				
 		checkboxes.forEach(cb => cb.checked = false);
 		posCheckboxes.forEach(cb => cb.checked = false);
 		
@@ -495,6 +495,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
