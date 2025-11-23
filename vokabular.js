@@ -26,27 +26,30 @@ document.addEventListener("DOMContentLoaded", () => {
 	fetchExcelData();
 
 	// Toggle dropdown visibility
-	dropdownHeader.addEventListener("click", () => {
+	dropdownHeader.addEventListener("click", (e) => {
+		e.stopPropagation(); // prevent document click from closing it immediately
 		dropdownOptions.classList.toggle("hidden");
+	});
+
+	// Toggle POS dropdown
+	posDropdownHeader.addEventListener("click", (e) => {
+		e.stopPropagation();
+		posDropdownOptions.classList.toggle("hidden");
 	});
 
 	// Close the dropdowns if clicked outside
 	document.addEventListener("click", (e) => {
 	  // Close dropdown if clicked outside
 	  if (!dropdownHeader.contains(e.target) && !dropdownOptions.contains(e.target)) {
-	    dropdownOptions.classList.add("hidden");
-	  }
+			dropdownOptions.classList.add("hidden");
+		}
 	
 	  // Close POS dropdown on outside click
 	  if (!posDropdownHeader.contains(e.target) && !posDropdownOptions.contains(e.target)) {
-	    posDropdownOptions.classList.add("hidden");
-	  }
+			posDropdownOptions.classList.add("hidden");
+		}
 	});
-
-	// Toggle POS dropdown
-	posDropdownHeader.addEventListener("click", () => {
-	  posDropdownOptions.classList.toggle("hidden");
-	});
+	
 	
 	// POS checkbox handling
 	function updatePOSSelection() {
@@ -463,6 +466,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
