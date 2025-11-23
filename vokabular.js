@@ -183,6 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	clearBtn.addEventListener("click", () => {
 		clearSelection();
 		dropdownHeader.textContent = "Select Level(s)";
+		posDropdownHeader.textContent = "Select Part(s) of Speech";
 	});
 
 	// Function to clear selection
@@ -487,6 +488,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
