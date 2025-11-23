@@ -12,11 +12,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	const posDropdownHeader = document.getElementById("posDropdownHeader");
 	const posDropdownOptions = document.getElementById("posDropdownOptions");
-	let posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
+	const posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
 
 	const clearBtn = document.getElementById("clearSelection");
 	const displayTableBtn = document.getElementById("displayTableBtn");
 	const SHEET_NAME = "vokabular";
+	
 	let allData = [];
 	let shuffledFlashcards = [];
 	let currentFlashcardIndex = 0;
@@ -465,6 +466,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
