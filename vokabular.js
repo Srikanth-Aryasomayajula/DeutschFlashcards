@@ -30,11 +30,17 @@ document.addEventListener("DOMContentLoaded", () => {
 		dropdownOptions.classList.toggle("hidden");
 	});
 
-	// Close dropdown if clicked outside
+	// Close the dropdowns if clicked outside
 	document.addEventListener("click", (e) => {
-		if (!dropdownHeader.contains(e.target) && !dropdownOptions.contains(e.target)) {
-		  dropdownOptions.classList.add("hidden");
-		}
+	  // Close dropdown if clicked outside
+	  if (!dropdownHeader.contains(e.target) && !dropdownOptions.contains(e.target)) {
+	    dropdownOptions.classList.add("hidden");
+	  }
+	
+	  // Close POS dropdown on outside click
+	  if (!posDropdownHeader.contains(e.target) && !posDropdownOptions.contains(e.target)) {
+	    posDropdownOptions.classList.add("hidden");
+	  }
 	});
 
 	// Toggle POS dropdown
@@ -42,12 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	  posDropdownOptions.classList.toggle("hidden");
 	});
 	
-	// Close POS dropdown on outside click
-	document.addEventListener("click", (e) => {
-	  if (!posDropdownHeader.contains(e.target) && !posDropdownOptions.contains(e.target)) {
-	    posDropdownOptions.classList.add("hidden");
-	  }
-	});
+
 	
 	// POS checkbox handling (similar to level logic)
 	function updatePOSSelection() {
@@ -452,4 +453,5 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
