@@ -79,11 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
 				checkboxes[0].checked = allSelected;
 			}
 		}
-		  
-		// Now collect selected levels and render table
-		selectedLevels = Array.from(checkboxes)
-			.filter(cb => cb.checked)
-			.map(cb => cb.value);
 
 		// Parts of speech checkboxes
 		posCheckboxes.forEach(checkbox => {
@@ -108,6 +103,11 @@ document.addEventListener("DOMContentLoaded", () => {
 				updatePOSSelection();
 			});
 		});
+		  
+		// Now collect selected levels and render table
+		selectedLevels = Array.from(checkboxes)
+			.filter(cb => cb.checked)
+			.map(cb => cb.value);
 		  
 		// Collect selected POS
 	    selectedPOS = Array.from(posCheckboxes)
@@ -495,6 +495,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
