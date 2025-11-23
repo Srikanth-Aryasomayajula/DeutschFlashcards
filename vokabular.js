@@ -231,7 +231,14 @@ document.addEventListener("DOMContentLoaded", () => {
 				allData = data;
 
 				// Populate unique Part of Speech options
-				const uniquePOS = Array.from(new Set(allData.map(r => (r["Part of Speech"] || "").trim()))).sort();
+				const uniquePOS = Array.from(
+					new Set(
+			            allData.map(r => {
+			                const pos = (r["Part of Speech"] || "").trim().toLowerCase();
+			                return pos.charAt(0).toUpperCase() + pos.slice(1); // capitalize first letter
+			            })
+			        )
+				).sort();
 				const posOptionsHTML = uniquePOS.map(pos => `<label><input type="checkbox" value="${pos}" /> ${pos}</label>`).join("");
 				posDropdownOptions.innerHTML += posOptionsHTML;
 				posCheckboxes = posDropdownOptions.querySelectorAll("input[type='checkbox']");
@@ -483,5 +490,6 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
