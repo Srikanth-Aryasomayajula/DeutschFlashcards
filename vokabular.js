@@ -127,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		  // posDropdownHeader.textContent = "Select Part(s) of Speech";
 		// } else if () {
 		  posDropdownHeader.textContent = "All";
+		  posCheckboxes.forEach(cb => cb.checked = true);
 		} else {
 		  posDropdownHeader.textContent = selectedPOS.join(", ");
 		}
@@ -485,6 +486,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
