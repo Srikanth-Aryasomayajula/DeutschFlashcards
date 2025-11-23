@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		// } else if () {
 		  posDropdownHeader.textContent = "All";
 		  posCheckboxes.forEach(cb => cb.checked = true);
+		  selectedPOS = Array.from(posCheckboxes).map(cb => cb.value);
 		} else {
 		  posDropdownHeader.textContent = selectedPOS.join(", ");
 		}
@@ -486,6 +487,7 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
 
 
 
