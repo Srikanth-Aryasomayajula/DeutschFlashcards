@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		// 	return;
 		// }
 		
-		applyFilters();
+		filteredData = applyFilters();
 		
 		if (tableViewRadio.checked) {
 			table.style.display = "none"; //'block' --> table is shown; 'none' --> table is hidden
@@ -469,3 +469,4 @@ document.addEventListener('click', (event) => {
         menu.classList.remove('show-menu');
     }
 });
+
