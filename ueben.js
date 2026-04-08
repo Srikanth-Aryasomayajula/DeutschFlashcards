@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	const levelCheckboxes = levelDropdownContainer.querySelectorAll("input[type='checkbox']");
 	const dropdownHeader = levelDropdownContainer.querySelector(".dropdown-header-1");
 	const dropdownOptions = levelDropdownContainer.querySelector(".dropdown-options");
-	const secondStartBtn = levelDropdownContainer.querySelector("#startAfterLevelSelect");
+	// const secondStartBtn = levelDropdownContainer.querySelector("#startAfterLevelSelect");
 
 	const germanPrepositions = [
 		"an", "am", "auf", "aus", "als", "bei", "beim", "durch", "für", "fürs", "gegen", "hinter", "in", "im", "mit",
