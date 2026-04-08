@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			const label = document.createElement("label");
 			const cb = document.createElement("input");
 			cb.type = "checkbox";
-			cb.value = level.toLowerCase();
+			cb.value = level;
 			cb.name = "levelCheckbox";
 			label.appendChild(cb);
 			label.append(` ${level}`);
