@@ -660,7 +660,7 @@ body {
 #controlRow {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
   justify-content: center; /* optional */
 }
 
