@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	const levelDropdownContainer = createLevelDropdown();
 	practiceArea.parentNode.insertBefore(levelDropdownContainer, practiceArea);
 
+	const posDropdownContainer = createPOSDropdown();
+	practiceArea.parentNode.insertBefore(posDropdownContainer, practiceArea);
+
 	const levelCheckboxes = levelDropdownContainer.querySelectorAll("input[type='checkbox']");
 	const dropdownHeader = levelDropdownContainer.querySelector(".dropdown-header-1");
 	const dropdownOptions = levelDropdownContainer.querySelector(".dropdown-options");
@@ -1124,6 +1127,29 @@ function generateStyledFlashcardFromRandomTableGram(allTables, currentIndex = nu
 	  };
 	}
 
+	function createPOSDropdown() {
+		const container = document.createElement("div");
+		container.className = "dropdown-buttons";
+		container.id = "posDropdownContainer";
+		container.style.display = "none";
+	
+		const dropdown = document.createElement("div");
+		dropdown.className = "custom-dropdown";
+	
+		const header = document.createElement("div");
+		header.className = "dropdown-header-1";
+		header.textContent = "Select Part(s) of Speech";
+		dropdown.appendChild(header);
+	
+		const options = document.createElement("div");
+		options.className = "dropdown-options hidden";
+	
+		dropdown.appendChild(options);
+		container.appendChild(dropdown);
+	
+		return container;
+	}
+	
 	async function loadVocabData() {
 	  try {
 	    const response = await fetch("vokabular.json");
