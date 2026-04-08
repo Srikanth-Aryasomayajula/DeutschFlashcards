@@ -657,6 +657,12 @@ body {
   margin-top: 1rem;
 }
 
+#levelDropdownContainer,
+#posDropdownContainer {
+    display: inline-flex;
+    margin-right: 10px;
+}
+
 /* Common iframe styles for all pages */
 iframe {
   display: block;
@@ -965,12 +971,6 @@ iframe {
 .flashcard {
   padding: 0.8rem;
   width: 95%;
-}
-
-#levelDropdownContainer,
-#posDropdownContainer {
-    display: inline-flex;
-    margin-right: 10px;
 }
 }
 
