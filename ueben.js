@@ -57,7 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		);
 	});
 	
-	setupLevelCheckboxes(levelCheckboxes, dropdownHeader);
+	// setupLevelCheckboxes(levelCheckboxes, dropdownHeader);
+	setupMultiSelectDropdown(levelCheckboxes, dropdownHeader, "Select Level(s)");
+	setupMultiSelectDropdown(posCheckboxes, posHeader, "Select Part(s) of Speech");
 	setupDropdownToggle(dropdownHeader, dropdownOptions);
 
 	loadFlashcards();
@@ -177,14 +179,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 	}
 
-	// Function to setup level checkboxes in the dropdown
-	function setupLevelCheckboxes(checkboxes, header) {
+	// Function to setup level and POS checkboxes in the dropdown
+	function setupMultiSelectDropdown(checkboxes, header, defaultText) {
 		checkboxes.forEach(cb => {
 			cb.addEventListener("change", () => {
-				const allBox = Array.from(checkboxes).find(c => c.value === "all");
-				const others = Array.from(checkboxes).filter(c => c.value !== "all");
+				const allBox = Array.from(checkboxes).find(c => c.value.toLowerCase() === "all");
+				const others = Array.from(checkboxes).filter(c => c.value.toLowerCase() !== "all");
 
-				if (cb.value === "all") {
+				if (cb.value.toLowerCase() === "all") {
 					const allChecked = others.every(c => c.checked);
 					others.forEach(c => c.checked = !allChecked);
 				} else {
@@ -193,14 +195,15 @@ document.addEventListener("DOMContentLoaded", () => {
 				}
 
 				const selected = Array.from(checkboxes)
-				  .filter(c => c.checked && c.value !== "all")
-				  .map(c => c.value.toUpperCase());
+					.filter(c => c.checked && c.value.toLowerCase() !== "all")
+					.map(c => c.value);
 
-				header.textContent = selected.length === 0
-				  ? "Select Level(s)"
-				  : selected.length === others.length
-					? "All"
-					: selected.join(", ");
+				header.textContent =
+					selected.length === 0
+						? defaultText
+						: selected.length === others.length
+						? "All"
+						: selected.join(", ");
 			});
 		});
 	}
