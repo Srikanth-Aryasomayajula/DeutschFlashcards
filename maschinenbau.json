@@ -474,6 +474,18 @@
     "Remarks": ""
   },
   {
+    "German": "die Betriebsfestigkeit, -en",
+    "English": "durability",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Dauerfestigkeit, -en",
+    "English": "durability",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
     "German": "der Werkstoff, -e",
     "English": "material",
     "Example": "Dieser Werkstoff ist für hohe Temperaturen geeignet.\nThis material is suitable for high temperatures.",
@@ -1038,8 +1050,134 @@
     "Remarks": "Mono = single; coque = shell --> single shell\n= outer structure that bears all the load\n= BIW + engine mounts + suspension mounts"
   },
   {
+    "German": "die Lenkung, -en",
+    "English": "Steering",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Deckel, -",
+    "English": "lid",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Längsträger, -",
+    "English": "longitudinal beam",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Montageträger, -",
+    "English": "mounting bracket",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Stoßfänger, -",
+    "English": "bumper of a car",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Anhänger, -",
+    "English": "trailer",
+    "Example": "",
+    "Remarks": "Anhängervorsichtung (AHV) = trailer caution"
+  },
+  {
+    "German": "die Achse, -n",
+    "English": "axle",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Rohbau",
+    "English": "BIW",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Balkenspinnen (pl.)",
+    "English": "spider beams",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Auswertungsknoten",
+    "English": "postprocessing nodes",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Abgas, -e",
+    "English": "exhaust",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Abgasanlage",
+    "English": "exhaust system",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Kühler, -",
+    "English": "radiator",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Antriebswelle, -n / die Getriebewelle, -n / die Gelenkwelle, -n",
+    "English": "drive shaft",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Luftführung, -en",
+    "English": "air flow / air flow system",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Motorhaube, -n",
+    "English": "hood of the car",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Scheinwerfer, -",
+    "English": "",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "der Türgriff, -e",
+    "English": "door handle",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "die Kurbelwelle, -n",
+    "English": "crank shaft",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "das Pendel, -",
+    "English": "pendulum",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
     "German": "das Harzsystem, -e",
     "English": "Resin system",
+    "Example": "",
+    "Remarks": ""
+  },
+  {
+    "German": "das Cabrio, -s",
+    "English": "convertible",
     "Example": "",
     "Remarks": ""
   },
