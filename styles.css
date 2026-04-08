@@ -657,10 +657,16 @@ body {
   margin-top: 1rem;
 }
 
+#controlRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center; /* optional */
+}
+
 #levelDropdownContainer,
 #posDropdownContainer {
-    display: inline-flex;
-    margin-right: 10px;
+  display: flex;
 }
 
 /* Common iframe styles for all pages */
