@@ -13,11 +13,20 @@ document.addEventListener("DOMContentLoaded", () => {
 	let maschinenbauData = [];
 	let fuehrerscheinData = [];
 
-	const levelDropdownContainer = createLevelDropdown();
-	practiceArea.parentNode.insertBefore(levelDropdownContainer, practiceArea);
+	const controlRow = document.createElement("div");
+	controlRow.id = "controlRow";
 
+	const levelDropdownContainer = createLevelDropdown();
 	const posDropdownContainer = createPOSDropdown();
-	practiceArea.parentNode.insertBefore(posDropdownContainer, practiceArea);
+
+	controlRow.appendChild(levelDropdownContainer);
+	controlRow.appendChild(posDropdownContainer);
+
+	// Move start button OUT of level container
+	const startBtn = levelDropdownContainer.querySelector("#startAfterLevelSelect");
+	controlRow.appendChild(startBtn);
+
+	practiceArea.parentNode.insertBefore(controlRow, practiceArea);
 
 	const levelCheckboxes = levelDropdownContainer.querySelectorAll("input[type='checkbox']");
 	const dropdownHeader = levelDropdownContainer.querySelector(".dropdown-header-1");
