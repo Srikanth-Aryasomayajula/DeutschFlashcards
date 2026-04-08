@@ -966,6 +966,12 @@ iframe {
   padding: 0.8rem;
   width: 95%;
 }
+
+#levelDropdownContainer,
+#posDropdownContainer {
+    display: inline-flex;
+    margin-right: 10px;
+}
 }
 
 @media (hover: none) {
