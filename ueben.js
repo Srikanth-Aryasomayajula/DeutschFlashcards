@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 	controlRow.appendChild(startBtn);
 
 	practiceArea.parentNode.insertBefore(controlRow, practiceArea);
+	
+	const secondStartBtn = startBtn;
 
 	const levelCheckboxes = levelDropdownContainer.querySelectorAll("input[type='checkbox']");
 	const dropdownHeader = levelDropdownContainer.querySelector(".dropdown-header-1");
