@@ -36,11 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	];
 	const allValidPrepositions = [...germanPrepositions, ...compoundPrepositions];
 
-	loadVocabData();
-
-	setTimeout(() => {
-		if (!window.vocabData) return;
-	
+	loadVocabData().then(() => {
 		const posOptionsContainer = posDropdownContainer.querySelector(".dropdown-options");
 	
 		const uniquePOS = Array.from(
@@ -59,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			posDropdownContainer.querySelector(".dropdown-header-1"),
 			posOptionsContainer
 		);
-	}, 300);
+	});
 	
 	setupLevelCheckboxes(levelCheckboxes, dropdownHeader);
 	setupDropdownToggle(dropdownHeader, dropdownOptions);
@@ -1196,16 +1192,17 @@ function generateStyledFlashcardFromRandomTableGram(allTables, currentIndex = nu
 	}
 	
 	async function loadVocabData() {
-	  try {
-	    const response = await fetch("vokabular.json");
-	    if (!response.ok) throw new Error("Failed to load vocab data");
+		try {
+			const response = await fetch("vokabular.json");
+			if (!response.ok) throw new Error("Failed to load vocab data");
 	
-	    const data = await response.json();
-	    window.vocabData = data; // ✅ make it globally available
+			const data = await response.json();
+			window.vocabData = data;
 	
-	  } catch (error) {
-	    console.error("Error loading vocab data:", error);
-	  }
+			return data; // ✅ IMPORTANT
+		} catch (error) {
+			console.error("Error loading vocab data:", error);
+		}
 	}
-	
+		
 });
