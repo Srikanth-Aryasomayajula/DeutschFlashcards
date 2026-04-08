@@ -904,6 +904,10 @@ iframe {
     gap: 15px;
   }
 
+  #controlRow {
+    gap: 0px;
+  }
+  
   .loadPracticeBtn {
     margin-bottom: 20px;
   }
