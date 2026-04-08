@@ -50,6 +50,11 @@ document.addEventListener("DOMContentLoaded", () => {
 		posOptionsContainer.innerHTML = uniquePOS.map(pos => `
 			<label><input type="checkbox" value="${pos}" /> ${pos}</label>
 		`).join("");
+
+		const posCheckboxes = posOptionsContainer.querySelectorAll("input[type='checkbox']");
+		const posHeader = posDropdownContainer.querySelector(".dropdown-header-1");
+
+		setupMultiSelectDropdown(posCheckboxes, posHeader, "Select Part(s) of Speech");
 	
 		setupDropdownToggle(
 			posDropdownContainer.querySelector(".dropdown-header-1"),
@@ -57,12 +62,9 @@ document.addEventListener("DOMContentLoaded", () => {
 		);
 	});
 
-	const posCheckboxes = posOptionsContainer.querySelectorAll("input[type='checkbox']");
-	const posHeader = posDropdownContainer.querySelector(".dropdown-header-1");
 	
 	// setupLevelCheckboxes(levelCheckboxes, dropdownHeader);
 	setupMultiSelectDropdown(levelCheckboxes, dropdownHeader, "Select Level(s)");
-	setupMultiSelectDropdown(posCheckboxes, posHeader, "Select Part(s) of Speech");
 	setupDropdownToggle(dropdownHeader, dropdownOptions);
 
 	loadFlashcards();
