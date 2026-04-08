@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	let filteredData = [];
 	let currentIndex = 0;
 	let selectedLevels = [];
+	let selectedPOS = [];
 	let SHEET_NAME;
 
 	// Define arrays to store loaded data
@@ -36,6 +37,29 @@ document.addEventListener("DOMContentLoaded", () => {
 	const allValidPrepositions = [...germanPrepositions, ...compoundPrepositions];
 
 	loadVocabData();
+
+	setTimeout(() => {
+		if (!window.vocabData) return;
+	
+		const posOptionsContainer = posDropdownContainer.querySelector(".dropdown-options");
+	
+		const uniquePOS = Array.from(
+			new Set(
+				window.vocabData.map(r =>
+					(r["Part of Speech"] || "").trim()
+				)
+			)
+		).filter(Boolean).sort();
+	
+		posOptionsContainer.innerHTML = uniquePOS.map(pos => `
+			<label><input type="checkbox" value="${pos}" /> ${pos}</label>
+		`).join("");
+	
+		setupDropdownToggle(
+			posDropdownContainer.querySelector(".dropdown-header-1"),
+			posOptionsContainer
+		);
+	}, 300);
 	
 	setupLevelCheckboxes(levelCheckboxes, dropdownHeader);
 	setupDropdownToggle(dropdownHeader, dropdownOptions);
@@ -45,9 +69,17 @@ document.addEventListener("DOMContentLoaded", () => {
 	// Second start button
 	secondStartBtn.addEventListener("click", () => {
 		selectedLevels = getSelectedLevels(levelCheckboxes);
-		if (selectedLevels.length === 0) return alert("Please select at least one level.");
+	
+		const posCheckboxes = posDropdownContainer.querySelectorAll("input[type='checkbox']");
+		selectedPOS = Array.from(posCheckboxes)
+			.filter(cb => cb.checked)
+			.map(cb => cb.value);
+	
+		if (selectedLevels.length === 0) return alert("Select at least one level.");
+		if (selectedPOS.length === 0) return alert("Select at least one part of speech.");
+	
 		const selectedSources = getSelectedValues(checkboxes);
-		startPractice(selectedSources, selectedLevels);
+		startPractice(selectedSources, selectedLevels, selectedPOS);
 	});
 
 	// Select the topic of practice
@@ -60,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	
 			if (selectedSources.includes("Vokabular")) {
 				levelDropdownContainer.style.display = "flex";
+				posDropdownContainer.style.display = "flex";
 				secondStartBtn.style.display = "inline-block";
 			} else if (selectedSources.includes("Grammatik")) {
 				(async function main() {
@@ -188,13 +221,24 @@ document.addEventListener("DOMContentLoaded", () => {
 			.map(cb => cb.value.toUpperCase());
 	}
 
-	function startPractice(selectedSources, selectedLevels) {
+	function startPractice(selectedSources, selectedLevels, selectedPOS) {
 		const vocabData = window.vocabData || [];
 
-		const data = vocabData.filter(row =>
-		  selectedSources.includes((row["Topic"] || row["SheetName"] || "Vokabular").trim()) &&
-		  (selectedSources.includes("Vokabular") ? selectedLevels.includes((row["Level"] || "").trim().toUpperCase()) : true)
-		);
+		const data = vocabData.filter(row => {
+			const topicMatch = selectedSources.includes(
+				(row["Topic"] || row["SheetName"] || "Vokabular").trim()
+			);
+		
+			const levelMatch = selectedLevels.includes(
+				(row["Level"] || "").trim().toUpperCase()
+			);
+		
+			const posMatch = selectedPOS.includes(
+				(row["Part of Speech"] || "").trim()
+			);
+		
+			return topicMatch && levelMatch && posMatch;
+		});
 
 		if (data.length > 0) {
 			filteredData = data.sort(() => 0.5 - Math.random());
@@ -205,6 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		levelDropdownContainer.style.display = "none";
+		posDropdownContainer.style.display = "none";
 		secondStartBtn.style.display = "none";
 	}
   
