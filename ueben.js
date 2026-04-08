@@ -56,6 +56,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			posOptionsContainer
 		);
 	});
+
+	const posCheckboxes = posOptionsContainer.querySelectorAll("input[type='checkbox']");
+	const posHeader = posDropdownContainer.querySelector(".dropdown-header-1");
 	
 	// setupLevelCheckboxes(levelCheckboxes, dropdownHeader);
 	setupMultiSelectDropdown(levelCheckboxes, dropdownHeader, "Select Level(s)");
