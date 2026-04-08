@@ -184,7 +184,14 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function startPractice(selectedSources, selectedLevels) {
-		const vocabData = window.vocabData || [];
+		// const vocabData = window.vocabData || [];
+
+		const vocabData = window.vocabData;
+
+		if (!vocabData || vocabData.length === 0) {
+		  alert("Data is still loading. Please click Start again.");
+		  return;
+		}
 
 		const data = vocabData.filter(row =>
 		  selectedSources.includes((row["Topic"] || row["SheetName"] || "Vokabular").trim()) &&
