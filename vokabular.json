@@ -1808,7 +1808,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "zum Beispiel (z.B.)",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "for example",
     "Usage": "Viele meiner Verwandten, z. B. meine beiden Brüder, arbeiten auch hier.\nMein Freund hat viele Hobbys, zum Beispiel Kochen, Lesen und Tanzen.",
     "Past (Präteritum)": "",
@@ -2354,7 +2354,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "der Brief, -e",
-    "Part of Speech": "noun",
+    "Part of Speech": "Noun",
     "Meaning": "letter",
     "Usage": "Haben Sie einen Brief für mich?",
     "Past (Präteritum)": "",
@@ -3558,7 +3558,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "der Familienstand",
-    "Part of Speech": "noun",
+    "Part of Speech": "Noun",
     "Meaning": "marital status",
     "Usage": "Bei \"Familienstand\" musst du \"ledig\" ankreuzen.",
     "Past (Präteritum)": "",
@@ -3712,7 +3712,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "bist du fertig?",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "are you ready?",
     "Usage": "",
     "Past (Präteritum)": "",
@@ -8668,7 +8668,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "sich",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "oneself",
     "Usage": "Sie müssen sich erst anmelden.",
     "Past (Präteritum)": "",
@@ -8682,7 +8682,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "sie",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "they",
     "Usage": "Wie heißt sie?",
     "Past (Präteritum)": "",
@@ -8696,7 +8696,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "Sie ",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "You (form.)",
     "Usage": "Wie heißen Sie, bitte?",
     "Past (Präteritum)": "",
@@ -9550,7 +9550,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "unser- ",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "our",
     "Usage": "Das ist unsere Lehrerin.",
     "Past (Präteritum)": "",
@@ -10292,7 +10292,7 @@
   {
     "Level": "A1",
     "Word (with Article and Plural)": "wir",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "we",
     "Usage": "Wir lernen Deutsch.",
     "Past (Präteritum)": "",
@@ -10656,7 +10656,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "ändern",
-    "Part of Speech": "verb",
+    "Part of Speech": "Verb",
     "Meaning": "change",
     "Usage": "Das Wetter hat sich geändert.",
     "Past (Präteritum)": "änderte",
@@ -10670,7 +10670,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "verändern",
-    "Part of Speech": "verb",
+    "Part of Speech": "Verb",
     "Meaning": "change",
     "Usage": "Sie verändert die Partei",
     "Past (Präteritum)": "veränderte",
@@ -12182,7 +12182,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "(sich) eignen",
-    "Part of Speech": "verb",
+    "Part of Speech": "Verb",
     "Meaning": "be suitable",
     "Usage": "Diese Abfahrt eignet sich nur für sehr gute Skifahrer.\nDieses Hotel eignet sich besonders für Familien mit Kindern.",
     "Past (Präteritum)": "eignete sich",
@@ -12490,7 +12490,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "etwas",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "etwas",
     "Usage": "Ich muss dir etwas erzählen!\nHaben Sie etwas zum Schreiben?\nIch habe leider nur Tee. Etwas anderes kann ich dir leider nicht anbieten.",
     "Past (Präteritum)": "",
@@ -13750,7 +13750,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "jeder, e, s",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "each / every",
     "Usage": "Das Restaurant hat jeden Tag geöffnet.\nJedes Kind bekommt einen Ball.",
     "Past (Präteritum)": "",
@@ -13764,7 +13764,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "jemand",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "someone",
     "Usage": "Hat jemand meinen Stift?\nHallo, ist jemand da?",
     "Past (Präteritum)": "",
@@ -15052,7 +15052,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "niemand",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "nobody",
     "Usage": "Hier ist niemand.\nHier ist der Anrufbeantworter von Familie Klein. Leider ist im Moment niemand zu Hause.",
     "Past (Präteritum)": "",
@@ -15248,7 +15248,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "ein paar",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "one pair",
     "Usage": "Wir fahren ein paar Tage ans Meer.\nHast du ein paar Minuten Zeit?",
     "Past (Präteritum)": "",
@@ -15752,7 +15752,7 @@
   {
     "Level": "A2",
     "Word (with Article and Plural)": "recht haben",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "being right",
     "Usage": "Du hast (nicht) recht. = you are (not) right",
     "Past (Präteritum)": "",
@@ -22080,7 +22080,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "ein bisschen",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "a little",
     "Usage": "Wenn Sie ein bisschen warten, können wir zusammen gehen.\nMöchten Sie noch ein bisschen Reis?\nKönnen Sie bitte ein bisschen lauter sprechen?\nSprechen Sie Englisch? - Ein bisschen.",
     "Past (Präteritum)": "",
@@ -22822,7 +22822,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "derselbe, dieselbe, dasselbe",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "the same",
     "Usage": "Mein Freund und ich gehen in dieselbe Schule.",
     "Past (Präteritum)": "",
@@ -24418,7 +24418,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "entweder ... oder",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "either … or",
     "Usage": "Nur einer kann gewinnen, entweder du oder ich.",
     "Past (Präteritum)": "",
@@ -26196,7 +26196,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "im Freien",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "outdoors / open air",
     "Usage": "Wir wollen heute im Freien übernachten.",
     "Past (Präteritum)": "",
@@ -28870,7 +28870,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "irgendein",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "anything",
     "Usage": "Was für einen Saft möchten Sie? - Ganz egal, irgendeinen.",
     "Past (Präteritum)": "",
@@ -28912,7 +28912,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "je … desto …",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "the… the…",
     "Usage": "Je länger ich Deutsch lerne, desto besser kann ich es verstehen.",
     "Past (Präteritum)": "",
@@ -31544,7 +31544,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "mehrere",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "several",
     "Usage": "Ich habe mehrere Leute gefragt. Aber niemand konnte mir helfen.\nViele Wörter haben mehrere Bedeutungen.",
     "Past (Präteritum)": "",
@@ -33280,7 +33280,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "(ein) paar",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "a few",
     "Usage": "Ich komme gleich. Es dauert nur ein paar Minuten.\nWir fahren mit ein paar Freunden in Urlaub.",
     "Past (Präteritum)": "",
@@ -35058,7 +35058,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "sämtliche",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "all",
     "Usage": "Sämtliche Fenster müssen geschlossen bleiben.",
     "Past (Präteritum)": "",
@@ -35940,7 +35940,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "selber",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "itself / oneself",
     "Usage": "Sie will das selber machen.",
     "Past (Präteritum)": "",
@@ -36402,7 +36402,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "solch-",
-    "Part of Speech": "pronoun",
+    "Part of Speech": "Pronoun",
     "Meaning": "such",
     "Usage": "Solche Schuhe finde ich toll.",
     "Past (Präteritum)": "",
@@ -36514,7 +36514,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "so viel/so viel wie",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "as much / as much as",
     "Usage": "Ich habe so viel gegessen. Jetzt ist mir schlecht.\nIch verdiene nur halb so viel wie er.",
     "Past (Präteritum)": "",
@@ -36542,7 +36542,7 @@
   {
     "Level": "B1",
     "Word (with Article and Plural)": "sowohl … als auch",
-    "Part of Speech": "phrase",
+    "Part of Speech": "Phrase",
     "Meaning": "as well as… and",
     "Usage": "Sowohl Sie als auch Ihre Frau müssen unterschreiben.",
     "Past (Präteritum)": "",
