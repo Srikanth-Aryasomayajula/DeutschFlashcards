@@ -39,13 +39,13 @@ document.addEventListener("DOMContentLoaded", () => {
 	loadVocabData().then(() => {
 		const posOptionsContainer = posDropdownContainer.querySelector(".dropdown-options");
 	
-		const uniquePOS = Array.from(
+		const uniquePOS = ["All", ...Array.from(
 			new Set(
 				window.vocabData.map(r =>
 					(r["Part of Speech"] || "").trim()
 				)
 			)
-		).filter(Boolean).sort();
+		).filter(Boolean).sort()];
 	
 		posOptionsContainer.innerHTML = uniquePOS.map(pos => `
 			<label><input type="checkbox" value="${pos}" /> ${pos}</label>
