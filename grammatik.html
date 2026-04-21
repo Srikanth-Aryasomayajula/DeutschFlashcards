@@ -19,16 +19,17 @@
     <!-- Embedded grammar content -->
     <iframe id="grammatikFrame"></iframe>
 
-    <script>
-    fetch('grammatik_table.html')
-      .then(res => res.arrayBuffer())
-      .then(buffer => {
-        const decoder = new TextDecoder("utf-8");
-        const html = decoder.decode(buffer);
-        document.getElementById('grammatikFrame').srcdoc = html;
-      });
-    </script>
   </main>
   <div id="footer-placeholder"></div>
+  <script>
+  fetch('grammatik_table.html')
+    .then(res => res.arrayBuffer())
+    .then(buffer => {
+      const decoder = new TextDecoder("utf-8");
+      const html = decoder.decode(buffer);
+      document.getElementById('grammatikFrame').srcdoc = html;
+    });
+  </script>
+  
 </body>
 </html>
