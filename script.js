@@ -3,6 +3,9 @@ window.addEventListener('DOMContentLoaded', () => {
   fetch('navbar.html')
     .then(response => response.text())
     .then(data => {
+	  const decoder = new TextDecoder("utf-8");
+      const data = decoder.decode(buffer);
+	
       document.getElementById('navbar-placeholder').innerHTML = data;
 
       const toggleBtn = document.getElementById("menuToggleBtn");
@@ -31,6 +34,10 @@ window.addEventListener('DOMContentLoaded', () => {
   fetch('footer.html')
     .then(response => response.text())
     .then(data => {
+		
+	  const decoder = new TextDecoder("utf-8");
+      const data = decoder.decode(buffer);
+	
       document.getElementById('footer-placeholder').innerHTML = data;
     });
 });
