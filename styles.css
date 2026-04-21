@@ -708,6 +708,7 @@ iframe {
 
 /* Grammatik page */
 .grammatik-page iframe {
+  font-family: Arial, Helvetica, sans-serif !important;
   width: calc(100vw - 30px);
   height: calc(100vh - 165px);
   overflow: auto;
