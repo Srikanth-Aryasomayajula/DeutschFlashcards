@@ -17,19 +17,9 @@
     <h1 class="main-title">Grammatik</h1>
 
     <!-- Embedded grammar content -->
-    <iframe id="grammatikFrame"></iframe>
+    <iframe id="grammatikFrame" src="grammatik_table.html"></iframe>
 
   </main>
-  <div id="footer-placeholder"></div>
-  <script>
-  fetch('grammatik_table.html')
-    .then(res => res.arrayBuffer())
-    .then(buffer => {
-      const decoder = new TextDecoder("utf-8");
-      const html = decoder.decode(buffer);
-      document.getElementById('grammatikFrame').srcdoc = html;
-    });
-  </script>
-  
+  <div id="footer-placeholder"></div> 
 </body>
 </html>
