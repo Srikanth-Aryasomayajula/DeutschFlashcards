@@ -27,6 +27,13 @@ def convert_to_utf8(file_path):
         content,
         flags=re.IGNORECASE
     )
+    
+    content = re.sub(
+        r'<meta[^>]+http-equiv=["\']?Content-Type["\']?[^>]*>',
+        '',
+        content,
+        flags=re.IGNORECASE
+    )
 
     if '<meta charset="UTF-8">' not in content:
         content = content.replace("<head>", "<head>\n<meta charset=\"UTF-8\">", 1)
@@ -70,7 +77,12 @@ for sheet_name, html_filename in sheets_to_export.items():
 
     # Prepare output paths inside Extracted_htmls
     html_file_path = os.path.join(output_dir, html_filename)
-    support_folder = os.path.join(output_dir, os.path.splitext(html_filename)[0] + "-Dateien")
+    base_name = os.path.splitext(html_filename)[0]
+
+    support_folder_de = os.path.join(output_dir, base_name + "-Dateien")
+    support_folder_en = os.path.join(output_dir, base_name + "_files")
+
+    support_folder = support_folder_de if os.path.exists(support_folder_de) else support_folder_en
 
     # Delete previous HTML file if exists
     if os.path.exists(html_file_path):
@@ -101,7 +113,14 @@ for sheet_name, html_filename in sheets_to_export.items():
     fix_frameset_rows(html_file_path)
 
     # Convert subfiles in support folder
-    if os.path.exists(support_folder):
+    support_folders = [
+        os.path.join(output_dir, base_name + "-Dateien"),
+        os.path.join(output_dir, base_name + "_files")
+    ]
+    
+    support_folder = next((f for f in support_folders if os.path.exists(f)), None)
+    
+    if support_folder:
         for root, _, files in os.walk(support_folder):
             for name in files:
                 if name.endswith('.html'):
@@ -150,3 +169,7 @@ for sheet_name in sheet_name_map:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
     print(f"Exported '{sheet_name}' to: {json_path}")
+    
+# Copy the xlsx also to the output folder
+shutil.copy("Vocabulary.xlsx", os.path.join(output_dir, "Vocabulary.xlsx"))
+print(f"Copied Excel file to: {output_dir}")
