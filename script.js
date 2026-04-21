@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   // Load navbar
   fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
+    .then(response => response.arrayBuffer())
+    .then(buffer => {
 	  const decoder = new TextDecoder("utf-8");
       const data = decoder.decode(buffer);
 	
@@ -32,8 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Load footer
   fetch('footer.html')
-    .then(response => response.text())
-    .then(data => {
+    .then(response => response.arrayBuffer())
+    .then(buffer => {
 		
 	  const decoder = new TextDecoder("utf-8");
       const data = decoder.decode(buffer);
