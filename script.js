@@ -1,11 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   // Load navbar
   fetch('navbar.html')
-    .then(response => response.arrayBuffer())
-    .then(buffer => {
-	  const decoder = new TextDecoder("utf-8");
-      const data = decoder.decode(buffer);
-	
+    .then(response => response.text())
+    .then(data => {
       document.getElementById('navbar-placeholder').innerHTML = data;
 
       const toggleBtn = document.getElementById("menuToggleBtn");
@@ -32,12 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Load footer
   fetch('footer.html')
-    .then(response => response.arrayBuffer())
-    .then(buffer => {
-		
-	  const decoder = new TextDecoder("utf-8");
-      const data = decoder.decode(buffer);
-	
+    .then(response => response.text())
+    .then(data => {
       document.getElementById('footer-placeholder').innerHTML = data;
     });
 });
