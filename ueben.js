@@ -1077,12 +1077,12 @@ function generateStyledFlashcardFromRandomTableGram(allTables, currentIndex = nu
 	function getBoldWords() {
 	  return [
 		"Nominativ", "Akkusativ", "Dativ", "Genetiv", "Maskulin", "Feminin", "Neuter",
-	    "Plural", "Remarks", "Type", "Case", "Akkusativ (O-FUDGE-bis)", "Dativ ((MAN-VS-BAGZ))",
+	    "Plural", "Remarks", "Type", "Case", "Akkusativ (O-FUDGE-bis)", "Dativ ((MAAN-VS-BAGZ))",
 		"Wechsel ((displacement vs position)) ((UÜ VIZ. HAAN))", "Präsenz", "Singular", "MV - Singular",
 	    "MV - Plural", "NS - Singular", "NS - Plural", "NS mit MV - Sin.", "NS mit MV - Pl.",
 	    "Präteritum", "Perfekt", "Plusquamperfekt", "Futur I", "Futur II", "Kriterium", "Beispiele",
 		"Würde-Form + Infinitiv for regelmäßig Präteritum", "Unregelmäßig Präteritum",
-		"Modalverben im Konjunktiv (Modalverb [finites Verb] + Infinitiv)" 
+		"Modalverben im Konjunktiv (Modalverb [finites Verb] + Infinitiv)", "Tenses in German", "German Tense", "English Tense", "Examples", "German Forms", "German Form",	"Usage"
 	  ];
 	}
 	
